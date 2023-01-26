@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1.onclick</p>
+
+<button onclick="document.write(Date())">The time is?</button><br><br>
+<button onclick="document.write(Date())">The time is?</button><br><br>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+function displayDate() {
+    document.write(Date());
+}
+</script><br><br>
+
+
+<button onclick="Date()">The time is?</button>
+
+<script>
+function displayDate() {
+    document.write(Date());
+}
+displayDate()    //print directly
+</script>
+
+
+<p>2.double click</p>
+<button Doubleclick="document.write(Date())">The time is?</button><br><br>
+
+<script>
+    function bigImg(x) {
+      x.style.height = "64px";
+      x.style.width = "64px";
+    }
+    
+    function normalImg(x) {
+      x.style.height = "32px";
+      x.style.width = "32px";
+    }
+    </script>
+
+
+
+<script>
+	<!--
+	function clickevent()
+	{
+		document.write("This is Javascript");
+	}
+	//-->
+</script>
+<form>
+<input type="button" onclick="clickevent()" value="Who's this?"/>
+</form><br>
+
+
+
+<p></p>
+<!-- <button onclick="myFunction()">Click me</button> -->
+<script>
+    <button onclick="myFunction()">Click me</button>
+function myFunction() {
+  document.write("Hello World");
+}
+
+</script>
+</body>
+</html>

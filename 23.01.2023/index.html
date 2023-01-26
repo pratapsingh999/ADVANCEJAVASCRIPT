@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>7)Exercise - Pizza</p>
+<script>
+    var toppings = ['A','tasty','pizza','with','Cheese','and','Ham','and','Bits','and','Tomatoes'];
+    function makePizza(){
+        return toppings
+    }
+   document.write(makePizza(toppings)+"<br>");
+
+   var toppingss = ['A','tasty','pizza','with','Cheese','and','Ham','and','Bits','and','Tomatoes'];
+   var b = toppingss.toString();
+   document.write(b+"<br>");
+
+   var toppingss = ['A','tasty','pizza','with','Cheese','and','Ham','and','Bits','and','Tomatoes'];
+   var b = toppingss.join(" ");
+   document.write(b+"<br>");
+</script><br>
+
+<p>8)Exercise - Capitalise every element</p>
+
+<script>
+    var a = [ "pratap","singh","thakur"];
+    const Capitalise = a.map(element => {
+  return element.toUpperCase();
+});
+    document.write(Capitalise);
+    console.log(Capitalise);
+</script><br>
+
+<script>
+    var ab = [ "pratap","singh","thakur"];
+    var re = ab.toString().toUpperCase();
+    document.write(re);
+ 
+</script><br>
+
+ <p>9)Exercise - Array Strings</p>
+ <p>1.Write a function that takes a list of strings an prints them, one per line, in a rectangular frame</p>
+<script>
+  const name =  ["Hello", "World", "in", "a", "frame"];
+  console.log(name[0]);
+  console.log(name[1]);
+  console.log(name[2]);
+  console.log(name[3]);
+  console.log(name[4])
+  document.write("*" + name[0]+"*" +"<br>");
+  document.write(name[1]+"<br>");
+  document.write(name[2]+"<br>");
+  document.write(name[3]+"<br>");
+  document.write(name[4]+"<br>");
+  
+</script><br>
+<!-- <script>
+var x = "Hello world in a frame";
+function star(str) {
+  let arr = [];
+  arr = str.split(" ");
+  for (let i = 0; i < 1; i++) {
+    for (let j = 0; j <= arr.length; j++) {
+     arr == arr[j].split(" ");
+      console.log("*" + arr[j] + "*" );
+    }
+  }
+  return arr;
+}
+console.log(star(x))
+ </script><br>   -->
+
+<script>
+  var x = ["Hello", "World", "in", "a", "frame"];
+  function stars(str) {
+    let arr = [];
+    arr = str;
+  for (let i = 0; i < 1; i++) {
+    for (let j = 0; j <= arr.length-1; j++) {
+      console.log("*" + arr[j] + "*");
+      document.write("*" + arr[j] + "*" +"<br>");
+    }
+  }
+}
+stars(x);
+</script><br>
+</body>
+</html>

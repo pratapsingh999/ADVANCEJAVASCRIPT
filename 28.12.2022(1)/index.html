@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>1.console.log()</p>
+
+<script>
+     console.log("Hello JS"); 
+     console.log("Hi pratap");
+</script><br>
+
+<p>Eg.1 Print variable in console</p>
+<script>
+    
+    var fname="pratap";         
+    var lname="singh";
+    console.log(fname,lname); 
+
+    var a = 13;
+    var b = 78;
+    console.log(a+b);
+    console.log(a-b);
+    console.log(a*b);
+    console.log(a%b);
+</script>
+
+<p>Eg.2 Placeholder in console(String Placeholder,Number Placeholder)</p>
+<script>
+      var name="Thakur pratap";         
+    console.log("Name is %s",name);
+
+     var id=12;         
+    console.log("Id is %d",id);
+
+    var number = 102;         
+    console.log("number is %d",number);
+</script>
+
+<p>Eg.3 Style console output</p>
+<script>
+      console.log("This is %c pratap","color:red"); 
+      console.log("This is %cpratap","color:blue");
+      console.log("This is %cpratap","color:green");
+
+      console.log("This text is %chighlighted text","background:yellow"); 
+      console.log("This text is %chighlighted text","background:red"); 
+      console.log("This text is %chighlighted text","background:green"); 
+</script>
+
+<p>2.console.warn</p>
+<script>
+    console.warn('its a warning');
+    console.warn('its a sanju baba');
+</script>
+
+
+<p>3.console.error</p>
+<script>
+    console.error('error found');
+    console.error("hkkk>>>>>>")
+</script>
+
+<p>4.console.table</p>
+<p>Eg.1 Print object in console.table</p>
+<script>
+    console.table({name:"avi",id:212});
+    console.table({name:"pratap",lastname:"thakur", age:23 ,place:"gulbarga"});
+</script>
+
+<p>Eg.2 Print array in console.table</p>
+<script>
+     console.table(["abc","pqr","xyz"]);
+     console.table(["pratap","singh","thakur",23,"gulbarga"]);
+</script>
+
+<p>Eg.3 Print array of object in console.table</p>
+<script>
+     console.table([{name:"pratap",lastname:"thakur", age:23 ,place:"gulbarga"}]);
+     console.table([{name:"avi",id:212},{name:"isha",id:200}])
+</script>
+
+<p>5.console.time</p>
+
+<script>
+    console.time('timer');
+
+    console.timeEnd('timer');
+
+</script>
+
+<p>6.console.clear</p>
+<script>
+    // console.clear();
+</script>
+
+<p>7.console.assert</p>
+<script>
+    console.assert(1===true);
+    console.assert(1==true); // If it is true, it does nothing
+</script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closures, implementation, higher order</title>
+</head>
+<body>
+    <p>18.closures</p>
+  <script>
+    // function x(){
+    //     var a =7;
+    //     function y(){
+    //      console.log(a);
+    //     }
+    //     y();
+    // }
+    // x();
+
+    // function x(){
+    //     var a = function (){        // function to veriable
+    //      console.log(a);
+    //     }
+    //     y();
+    // }
+    // x();
+
+//    function x(){
+//         var a =7;
+//         function y(){
+//          console.log(a);
+//         }
+//         return y();
+//     }
+//     x();
+
+   function x(){
+        var a =7;
+        function y(){
+         console.log(a);
+        }
+        return y;
+    }
+     var z  = x();
+     console.log(z);
+     z();
+  </script>
+
+    <p>19.implementation of Javascript</p>
+        <p>*.Inpage Javascript</p>
+         <script>
+
+         </script>
+
+         <p>*.External Javascript</p>
+          <script src="js/test.js"></script>
+
+    <p>20.higher order function</p>
+<!-- <script>
+    const readius = [3,1,2,4];
+    const calcularearea = function(readius){
+        const output = [];
+        for (let i=0; i<readius.length; i++){
+            output.push(Math.PI*readius[i]*readius[i]);
+        }
+        return output;
+    };
+    console.log(calcularearea(readius));
+
+    const calcularecircumference = function(readius){
+        const output = [];
+        for (let i=0; i<readius.length; i++){
+            output.push(2*Math.PI*readius[i]);
+        }
+        return output;
+    };
+    console.log(calcularecircumference(readius));
+
+    const calcularediameter = function(readius){
+        const output = [];
+        for (let i=0; i<readius.length; i++){
+            output.push(2*readius[i]);
+        }
+        return output;
+    };
+    console.log(calcularediameter(readius));
+</script><br>
+
+<script>
+     const readiuss = [3,1,2,4];
+     const area = function(readiuss){
+        return Math.PI*readiuss*readiuss;
+     };
+     const circumference = function(readiuss){
+        return 2*Math.PI*readiuss;
+     };
+     const diameter = function(readiuss){
+        return 2*readiuss;
+     };
+     const calculation = function(readiuss,logic){
+        const output = [];
+        for(let i = 0; i<readiuss.length; i++){
+            output.push(logic(readiuss[i]));
+        }
+        return output;
+     };
+     console.log(calculation(readiuss,area));
+     console.log(calculation(readiuss,circumference));
+     console.log(calculation(readiuss,diameter));
+</script> -->
+
+<script>
+         const readiusss = [3,1,2,4];
+     const areas = function(readiusss){
+        return Math.PI*readiusss*readiusss;
+     };
+     console.log(readiusss.map(areas));
+     const circumferences = function(readiuss){
+        return 2*Math.PI*readiuss;
+     };
+     console.log(readiusss.map(circumferences));
+     const diameters = function(readiuss){
+        return 2*readiuss;
+     };
+     console.log(readiusss.map(diameters));
+</script><br>
+</body>
+</html>

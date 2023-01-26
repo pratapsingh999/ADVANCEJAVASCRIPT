@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>10)Exercise - Array Strings</p>
+<p></p>
+<!-- <script>
+  function pigIt(str){
+  let strArr = str.split(' ');
+  let pigLatin = [];
+
+  for(let word of strArr){
+    if((/([a-zA-Z])/).test(word)){
+      pigLatin.push(word.substring(1) + word[0] + "ay");
+    }else{
+      pigLatin.push(word);
+    }
+  }
+  return pigLatin.join(" ");
+}
+pigIt();
+console.log(pigIt("oratapp"));
+</script><br>   -->
+
+<script>
+  const pigLatinSentence = (s) => {
+       let ans = "";
+       for (let i = 0; i < s.length; i++) {
+           let j = i;
+           if (i >= s.length)
+               break;
+           while (i < s.length && s.charAt(i) != ' ')
+               i++;
+           if (ans.length === 0) {
+               ans = ans + s.substring(j + 1, i) + s.charAt(j) + "ay";
+           }
+           else {
+               ans = ans + " " + s.substring(j + 1, i) + s.charAt(j) + "ay";
+           }
+       }
+       return ans;
+   }
+ 
+   // Driver code
+ 
+   let s = "sally knows best";
+   document.write(pigLatinSentence(s))
+</script><br>
+
+ <script>
+  function pigLatin(str){
+    let vowels ="AEIOUaeiou";
+    let pigged = "";
+    for(let i=0; i<str.length; i++){
+    } if (vowels.includes(str[0])) {
+      pigged=str+"ay";
+
+    }else if(vowels.includes(str[i])) {
+    
+            let part1 = str.slice(0,i);
+            let part2 = str.slice(i);
+            pigged = part2+part1+"ay";
+            // break;
+    }
+    return pigged;
+  }
+  pigLatin();
+console.log(pigLatin("apple"));
+console.log(pigLatin("banana"));
+console.log(pigLatin("orange"));
+</script><br>  
+
+<script>
+          function translateToPigLatin(text) {
+        
+        let words = text.split(" ");
+        
+        let pigLatinWords = words.map(word => {
+            let firstLetter = word[0];
+            let restOfWord = word.slice(1);
+            return restOfWord + firstLetter + "ay";
+        });
+        
+        return pigLatinWords.join(" ");
+        }
+
+        function translateToEnglish(text) {
+            let words = text.split(" ");
+            let englishWords = words.map(word => {
+                let lastLetters = word.slice(-3);
+                let restOfWord = word.slice(0, -3);
+                return lastLetters.slice(0, -2) + restOfWord;
+            });
+            return englishWords.join(" ");
+        }
+        let text = "The quick brown fox";
+        document.write(translateToPigLatin(text)+"<br>"); 
+        document.write(translateToEnglish("Hetay uickqay rownbay oxfay"))
+</script>
+
+<p>11)Exercise - Array Strings</p>
+<p></p>
+<!-- <script>
+var a = [1,4,3,2,5,7];
+var v = a.sort().pop();   //max value 
+console.log(v);      //min value
+document.write(v);
+</script><br> -->
+
+<script>
+  
+        function nearestLarger(arr) {
+            let result = {};
+            for (let i = 0; i < arr.length; i++) {
+                let nearest = null;
+                let nearestDistance = Number.MAX_SAFE_INTEGER;
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] > arr[i]) {
+                        if (j - i < nearestDistance) {
+                            nearest = arr[j];
+                            nearestDistance = j - i;
+                        }
+                    }
+                }
+                result[arr[i]] = nearest;
+            }
+            return result;
+        }
+        let arr = [1,4,3,2,5,7];
+        document.write(nearestLarger(arr));
+</script><br>
+
+<p>12).Exercise</p>
+<script>
+  
+        function persistence(num) {
+            let count = 0;
+            while (num >= 10) {
+                num = num.toString().split('').reduce((a, b) => a * b);
+                count++;
+            }
+            return count;
+          }
+        console.log(persistence(999));
+        console.log(persistence(39));
+        console.log(persistence(4));
+</script><br>
+
+
+</body>
+</html>
