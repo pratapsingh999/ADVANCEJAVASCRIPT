@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAP(), filter(), reduce()</title>
+</head>
+<body>
+  <p>call back</p>
+    <p>1.MAP()</p>
+    <!-- <script>
+        const arr = [5,1,3,2,6];
+        const double = function(x){
+            return x*2;
+        }
+        console.log(arr.map(double));
+        document.write(arr.map(double)+"<br>");
+    
+        const arrs = [5,1,3,2,6];
+        const doubles = function(x){
+            return x+2;
+        }
+        const output = arrs.map(doubles);
+        console.log(output);
+        document.write(output+"<br>");
+    
+        const a = [5,1,3,2,6];
+        const triple = function(x){
+            return x*3;
+        }
+        console.log(a.map(triple));
+        document.write(a.map(triple)+"<br>");
+    
+        const c = [5,1,3,2,6];
+        const binary = function(x){
+            return x.toString(2);
+        }
+        const outputSs = c.map(binary);
+        console.log(outputSs);
+    
+        // console.log(c.map(binary));
+        // document.write(c.map(binary)+"<br>");
+    
+      //  const outputS = c.map((x) => x.toString(2));
+      //  console.log(outputS);
+    
+      //  const outputSss = c.map(function(x){
+      //       return x.toString(2);
+      //   });
+      //   console.log(outputSss);
+    </script><br>  -->
+    
+     <p>2.filter()</p>
+    
+    <!-- <script>
+       const f = [5,1,3,2,6];
+       const evennumber = function(f){
+        return f%2===0;
+       }
+       console.log(f.filter(evennumber));
+       document.write(f.filter(evennumber)+"<br>");
+    
+       const oddnumber = function(x){
+        return x%2;
+       }
+       console.log(f.filter(oddnumber));
+       document.write(f.filter(oddnumber)+"<br>");
+      //  console.log(f.map(oddnumber));
+       
+       const greaterthen = function(x){
+        return x>4;
+       }
+       console.log(f.filter(greaterthen)); 
+       document.write(f.filter(greaterthen)+"<br>");  
+      </script><br> -->
+    
+    <p>3.reduce()</p>
+    
+    <script>
+      // const arrab = [5,1,3,2,6];                         // normal function
+      // function findsume(ab){
+      //   let sum = 0;
+      //   for (let i = 0; i < arrab.length; i++) {
+      //     sum += arrab[i];
+      //   }
+      //   return sum;
+      // }
+      // console.log(findsume(arrab));
+      // document.write(findsume(arrab)+"<br>");
+    
+      // // const arrab(curr) = [5,1,3,2,6];
+      // const result = arrab.reduce(function(acc,curr){      //reduce fuction
+      //   acc = acc+curr;
+      //   return acc;
+      // },0);
+      // console.log(result);
+      // document.write(result +"<br>");
+    
+      const arrabc = [5,1,3,2,6];                         // normal function
+      function findmax(ac){
+        let max = 0;
+        for (let i = 0; i < arrabc.length; i++) {
+          if(arrabc[i]>max){
+            max =arrabc[i];
+          }  
+        }
+        return max;
+      }
+      console.log(findmax(arrabc));
+      document.write(findmax(arrabc)+"<br>");
+    
+      const arrabcd = [5,1,3,2,6]; 
+      const results = arrabcd.reduce(function(max,curr){
+        if(curr>max){
+          max=curr;
+        }
+        return max;
+      },0)
+      console.log(results);
+      document.write(findmax(arrabcd)+"<br>");
+    </script><br<>
+    
+    <p></p>
+    <script>
+      const user =[
+        {firstname:"akshay", lastname:"saini", age:26},
+        {firstname:"donal", lastname:"trump", age:75},
+        {firstname:"elon", lastname:"music", age:50},
+        {firstname:"deepica", lastname:"padukone", age:26},
+        {firstname:"pratap", lastname:"singh", age:23},
+        {firstname:"akash", lastname:"singh", age:21},
+        {firstname:"aditya", lastname:"singh", age:18},
+      ]
+      const outputa = user.reduce(function(acc,curr){
+        if(acc[curr.age]){
+          acc[curr.age] = ++acc[curr.age];
+        }else{
+          acc[curr.age] = 1;
+        }
+        return acc;
+      },{})
+      console.log(outputa);
+    </script>
+    
+    <script>
+       const users =[
+        {firstname:"akshay", lastname:"saini", age:26},
+        {firstname:"donal", lastname:"trump", age:75},
+        {firstname:"elon", lastname:"music", age:50},
+        {firstname:"deepica", lastname:"padukone", age:26},
+        {firstname:"pratap", lastname:"singh", age:23},
+        {firstname:"akash", lastname:"singh", age:21},
+        {firstname:"aditya", lastname:"singh", age:18},
+      ]
+      const ans = users.map((x) => x.firstname +" "+x.lastname);
+      console.log(ans);
+    </script>
+</body>
+</html>

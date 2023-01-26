@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template strings, Arrow function, </title>
+</head>
+<body>
+    <p>1.Advance js template strings</p>
+<script>
+    let firstname = "pratap singh";
+    let lastname = "thakur";
+    function person(firstname,lastname){
+        return `${firstname}${lastname}`;
+    }
+    let hello = `1.Hello ${person(firstname,lastname +"<br>")}`;
+    document.write(hello);
+    document.write(person("2.Hello"+firstname, lastname +"<br>"));
+
+    let user = "pratap singh";
+    let mark = 350;
+    document.write(`3.Hello ${user} your mark is ${mark}`+ "<br>");
+    document.write("4.Hello" + user + "your mark is" + mark + "<br>" )
+</script><br>
+
+<p>2.Advance js Arrow function</p>
+<script>
+    let welcome = function(name){
+        return `hello and wellcome ${name}`;
+    }
+    document.write(welcome("pratap singh"));   // normal function
+</script><br>
+<script>
+ let welcomes = (name) => {
+        return `hello and wellcome ${name}`;
+    }
+    document.write(welcomes("pratap singh"));  //arrow function
+</script><br>
+<script>
+    let welcomess = (name,age) => `hello and wellcome ${name} ${age}`;
+       document.write(welcomess("pratap singh",23));                    //single arrow function 
+   </script><br>
+
+<p>3.Advance js Rest operator</p>
+
+<script>
+    function sum() {
+
+        let sum = 0;
+        for (const i in arguments) {
+            sum+=arguments[i];
+        }
+        document.write(sum +"<br>")
+    }
+    sum(23,34,56,57,34);
+    sum(23,34,76,89,56,57,34);
+</script><br>
+
+<script>
+    function sum(name,names,...args) {
+document.write(`Hello AND WELLCOME ${name} ${names} = `)
+let sum = 0;
+for (let i in args) {
+    sum+=args[i];
+}
+document.write(sum +"<br>",)
+}
+sum("pratap","singh",23,34,56,57,34);
+sum("baba" ,"saheb",34,76,89,56,57,34);
+</script><br>
+
+
+<script>
+    function sum(name,...args) {
+document.write(`Hello ${name}= `)
+let sum = 0;
+for (let i in args) {
+    sum+=args[i];
+}
+document.write(sum +"<br>")
+}
+sum("pratap",23,34,56,57,34);
+sum("baba" ,34,76,89,56,57,34);
+</script><br>
+</body>
+</html>
+
+
+

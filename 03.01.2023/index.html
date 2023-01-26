@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread operator, Object Literals, Destructuring array, Destructuring objects</title>
+</head>
+<body>
+    <p>4.Advance js spread operator</p>
+<script>
+    function sum(name,...args){
+      document.write(`hello ${name}`);
+      let sum = 0;
+      for(let i in args){
+        sum+=args[i];
+      }
+      document.write(sum);
+    }
+    var arry = [10,20,30,40,50];
+    sum("pratap singh",...arry);
+</script><br>
+
+<script>
+    var arr1 = [10,20,30,40,50];
+    var arr2 = arr1;
+    document.write(arr2);
+    // var arr2 = ...arr1;
+</script><br>
+
+<p>5.Object Literals</p>
+<script>
+    let name = "pratap singh";
+    let course ="B.E";
+    var obj = {
+       name : name,
+       course : course,
+    };
+    let hello = `1.Hello ${name} ${course}`     //Before ES6 version
+    console.log(obj);
+    document.write(hello)
+</script><br>
+
+<script>                                   
+ let names = "pratap singh";                    // ES6 version bject literals
+    let courses ="B.E";
+    var obj = {
+       names,
+       courses,
+    };
+    let helloo = `2.Hello ${names} ${courses}`
+    console.log(obj);
+    document.write(helloo)
+</script><br> 
+
+<script>                                   
+    let n = "student" ;                   // ES6 version bject literals
+       var obj = {
+          [n + "name"] : "pratap singh",
+          courses : "B.E",
+       };
+    //    let helloos = `3.Hello ${name} ${courses}`
+       console.log(obj);
+    //    document.write(helloos);
+   </script><br> 
+
+ <script>             
+        var obj = {
+         name : "pratap singh",
+         course :"B.E",
+        detail : function(){
+        return`${this.name} is ${this.course}`
+    }
+       };
+    //    let hellos = `3.Hello ${A} ${course}`
+       console.log(obj);
+       document.write(obj.detail());
+   </script><br> 
+
+<script>                                   
+    let a = "student" ;                   // ES6 version bject literals
+       var obj = {
+          [a] : "pratap singh",
+          course : "B.E",
+       };
+    //    let hellos = `3.Hello ${this.student} ${this.course}`
+       console.log(obj);
+    //    document.write(student);
+   </script><br>  
+
+     <script>
+    let fname = "pratap";
+    let lname = "singh";
+    let coursed = "B.E";
+    function person(fname,lname,coursed){
+        return fname+" " +lname+" " +coursed
+    }
+    document.write(person(fname,lname,coursed));
+   </script><br>
+
+
+
+ <script>
+    let fname1 = "pratap";
+    let lname2 = "singh";
+    // let course = "B.E";
+    function person(fname1,lname2){
+    //    let fullname = fname+" "+lname;
+        return {fname1,lname2};
+    }
+    // document.write(person(fname,lname));
+    console.log(person(fname1,lname2));
+   </script> <br>
+
+<p>6.Destructuring array</p>
+<script>
+ let user = ["pratap","singh",23,"gulbarga"];                     //Before ES6 version
+ let namess = user[0];
+ let lastname = user[1];
+ let age = user[2];
+ let from = user[3];
+ document.write(user);
+</script><br>
+
+<script>
+  let users = ["pratap","singh",23,"gulbarga"]; 
+  let [namesss,lastnames,ages,froms] = users;
+  document.write(users +"<br>");
+  document.write(lastnames);
+</script><br><br><br>
+
+//nested array<br>
+<script>
+   let userss = ["pratap","singh",23,"gulbarga",["male","25000"]];
+   let [namessss,lastnamess,agess,fromss,[gender,salry]] = userss;
+   document.write(userss+"<br>"); 
+   let [namedd, ...arguments] = userss;
+   document.write(namedd+"<br>"); 
+   document.write(arguments+"<br>"); 
+ </script><br>
+
+//with function<br>
+<script>
+ function person([name,age,city]){
+     document.write(name+"<br>");
+     document.write(age+"<br>");
+     document.write(city+"<br>");
+ }
+ person(["pratapsingh",23,"gulbarga"]);
+</script><br>
+<script>
+function personsss(){
+ return ["pratapsingh",23,"gulbarga"];
+}
+let [namesssss,agesss,city] = personsss();
+console.log(city);
+document.write(name);
+</script>
+
+<P>7.Destructuring objects</P>
+<script>
+ let personname ={
+     firstname : "pratap singh",
+     Age : 23,
+     citys : "gulbarga",
+ }
+ let {firstname,Age,citys} = personname;
+ document.write(firstname+"<br>");
+ document.write(Age+"<br>");
+ document.write(citys+"<br>");
+</script><br>
+<script>
+  let personnames ={
+     firstnames : "pratap singh",
+     Ages : 23,
+     cityss : "gulbarga",
+ }
+ let {firstnames:f, Ages:A, cityss:c} = personnames;
+ document.write(f+"<br>");
+ document.write(A+"<br>");
+ document.write(c+"<br>");
+</script><br>
+</body>
+</html>

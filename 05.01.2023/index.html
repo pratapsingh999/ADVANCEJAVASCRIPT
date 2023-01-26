@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise, promise.all()</title>
+</head>
+<body>
+    <p>11.promise</p>
+<!-- <script>
+    let complete = true;
+    let prom = new Promise(function(resolve,reject){
+        if (complete){
+            resolve("i am successfull");
+        }else{
+            reject("i am failed");
+        }
+    
+    });
+    console.log(prom);
+</script><br> -->
+
+<!-- <script>
+    function prom(complete){
+     return new Promise(function(resolve,reject){
+        if (complete){
+            resolve("i am successfull");
+        }else{
+            reject("i am failed");
+        }
+    
+    });
+}
+    let onfulfilment =(result) => {
+         console.log(result);
+    }
+    let onrejection =(error) => {
+        console.log(error);
+}
+    // prom(true).then(onfulfilment);
+    // prom(true).catch(onrejection);
+    // prom(true).then(onfulfilment).catch(onrejection);
+    prom(true).then((result)=>{console.log(result);}).catch((error)=>{console.log(error);});
+</script><br> -->
+
+<!-- <script>
+       function prom(complete){
+     return new Promise(function(resolve,reject){
+        console.log("fetching data plase wait");
+        setTimeout(() =>{
+            if (complete){
+            resolve("i am successfull");
+        }else{
+            reject("i am failed");
+        }
+        },3000)
+    });
+}
+    let onfulfilment =(result) => {
+         console.log(result);
+    }
+    let onrejection =(error) => {
+        console.log(error);
+}
+prom(true).then((result)=>{console.log(result);}).catch((error)=>{console.log(error);});
+</script><br> -->
+
+<!-- <script>
+           function prom(a,b){
+     return new Promise(function(resolve,reject){
+        console.log("fetching data plase wait");
+        var c = a/b;
+        setTimeout(() =>{
+            if (a,b){
+            resolve(`ans is  ${c}`);
+        }else{
+            reject("calculation is failed");
+        }
+        },3000)
+    });
+}
+    let onfulfilment =(result) => {
+         console.log(result);
+    }
+    let onrejection =(error) => {
+        console.log(error);
+}
+prom(5,8).then((result)=>{console.log(result);}).catch((error)=>{console.log(error);});
+</script><br> -->
+
+<p>12.promise.all()</p>
+<!-- <script>
+ let p1 = new Promise((resole,reject) =>{
+    setTimeout(() =>{
+        console.log('the 1st promise has resolved');
+        resole(10);
+    },1*1000);
+ });
+ let p2 = new Promise((resole,reject) =>{
+    setTimeout(() =>{
+        console.log('the 2st promise has resolved');
+        resole(100);
+    },2*1000);
+ });
+ let p3 = new Promise((resole,reject) =>{
+    setTimeout(() =>{
+        console.log('the 3st promise has resolved');
+        resole(90);
+    },3*1000);
+ });
+ var total = 0;
+ Promise.all([p1,p2,p3]).then((result) =>{ 
+    for(var i in result) {total += result[i];}
+    console.log(`result : ${result}`);
+    console.log(`total : ${total}`);
+}).catch((error)=>{
+    console.log(`error : ${error}`);
+})
+</script><br> -->
+
+<script>
+    let promiseCall = function(returndata,message){
+        return function(resolve, reject){
+    setTimeout(() =>{
+        console.log(`the ${message} promise has resoled`);
+        resolve(returndata);
+    },returndata*100);
+}
+ };
+ let p1 = new promise (promiseCall(10,"1st"));
+ let p2 = new promise (promiseCall(20,"2nd"));
+ let p3 = new promise (promiseCall(80,"3rd"));
+
+ var total = 0;
+ Promise.all([p1,p2,p3]).then((result) =>{ 
+    for(var i in result) {total += result[i];}
+    console.log(`result : ${result}`);
+    console.log(`total : ${total}`);
+}).catch((error)=>{
+    console.log(`error : ${error}`);
+});
+</script>
+</body>
+</html>

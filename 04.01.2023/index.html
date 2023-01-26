@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oop, class inheritance, modules</title>
+</head>
+<body>
+    <p>8.oop(class & object)</p>
+<script>
+    class Hello{
+        message (){
+            document.write("hello boyes"+"<br>");
+        }
+    }
+    let j = new Hello();
+    j.message();
+</script><br>
+<script>
+    class Hellos{
+        message (){
+            document.write("hello boyes"+"<br>");
+        }
+        sorry(){
+            document.write("hello girls"+"<br>");
+        }
+    }
+    let k = new Hellos();
+    k.message();
+    k.sorry();
+</script><br>
+
+<!-- <p>type of methods</p>
+<script>
+    constructor = constructor(){
+        console.log("hello")
+    }
+    prototype = message(){
+        console.log("hii")
+    }
+    static = static name(){
+        console.log("huuuu")
+    }
+
+</script><br> -->
+
+<script>
+class student{
+        constructor (){
+            document.write("hello boyes"+"<br>");
+        }
+        sorry(){
+            document.write("hello"+this.name+"<br>");
+        }
+    }
+    let kj = new student();
+    kj.name = "pratap singh";
+    kj.sorry();
+</script><br>
+
+<script>
+    class studentnames{
+        constructor(name,age){
+            this.studentname = name;
+            this.studentage = age;
+            console.log("hello bhai");
+        }
+    Hellosss(){
+    document.write(`hello ${this.studentname} your age is ${this.studentage}`)
+    }
+}
+let g = new studentnames("pratap singh",23+"<br>");
+let l = new studentnames("ram singh",23+"<br>");
+g.Hellosss();
+l.Hellosss();
+    
+</script><br>
+
+<script>
+    class studentnamess{
+        constructor(name,age){
+            this.studentname = name;
+            this.studentage = age;
+            console.log("hello bhai");
+        }
+    Hellosss(){
+    document.write(`hello ${this.studentname} your age is ${this.studentage}`)
+    }
+    static staticmethod(){
+        document.write("static function")
+    }
+}
+let gg = new studentnames("pratap singh",23+"<br>");
+let lj = new studentnames("ram singh",23+"<br>");
+gg.Hellosss();
+lj.Hellosss();
+studentnamess.staticmethod(); 
+</script><br>
+
+<p>9.class inheritance (oop)</p>
+
+<!-- <script>
+     class employee {
+        constructor(name){
+            console.log("constructor : employe" +" "+ name);
+            document.write("constructor : employe" +" "+ name);
+        }
+    }
+    let b = new employee("singh prtap");
+</script><br>
+<script>
+    class employees {
+        constructor(name){
+            console.log("constructor : employe" +" "+ name);
+            document.write("constructor : employe" +" "+ name);
+        }
+    }
+    class manager extends employees{
+
+    }
+    let a = new manager("pratap singh");
+</script><br> -->
+
+<!-- <script>
+     class employeess {
+        constructor(name){
+            console.log("constructor : employe" +" "+  name);
+            document.write("constructor : employe" +" "+  name +"<br>");
+        }
+    }
+    class managers extends employeess{
+        constructor(name){
+            super();
+            document.write("constructor : managers" +" "+  name+"<br>");
+        }
+    }
+    let aa = new managers("pratap singh");
+    // let aaa = new employeess("pratap singh");   
+</script><br> -->
+
+ <!-- <script>
+         class employeess {
+        constructor(name){
+            this.employeess=name;
+            console.log("constructor : employe" +" "+ this.employeess);
+            document.write("constructor : employe" +" "+ this.employeess +"<br>");
+        }
+        info(){
+            document.write("manager name : " +" "+ this.employeess +"<br>"); 
+        }
+    }
+    class managers extends employeess{
+        info(){
+            super.info();
+            document.write("manager name : " +" "+ this.employeess +"<br>"); 
+        }
+    }
+    let aaa = new managers("pratap singh");
+    aaa.info();
+</script><br>-->
+
+<!-- <script>
+     class employeess {
+        constructor(name,age,salary){
+            this.employeess=name;
+            this.employeessage=age;
+            this.employeesssalary=salary;
+            console.log("constructor : employe" +" "+ this.employeess);
+            document.write("constructor : employe" +" "+ this.employeess +"<br>");
+        }
+        info(){
+            document.write("manager name : " +" "+ this.employeess +"<br>"); 
+            document.write("manager name : " +" "+ this.employeessage +"<br>"); 
+            document.write("manager name : " +" "+ this.employeesssalary +"<br>"); 
+        }
+    }
+    class managers extends employeess{
+        // info(){
+        //     super.info();
+        //     document.write("manager name : " +" "+ this.employeess +"<br>"); 
+        // }
+    }
+    let aaa = new managers("pratap singh","23",25000);
+    aaa.info(); 
+</script><br> -->
+
+<!-- <script>
+      class employeess {
+        constructor(name,age,salary){
+            this.empname=name;
+            this.empage=age;
+            this.empsalary=salary;
+            console.log("constructor : employe" +" "+ this.employeesname);
+            document.write("constructor : employe" +" "+ this.employeesname +"<br>");
+        }
+        info(){
+            document.write(`<h4> EMPLOYE class</h3>
+                name :${this.empname}<br>
+                age : ${this.empage}<br>
+                salary : ${this.empsalary}<br>`); 
+        }
+    }
+    class managers extends employeess{
+        info(){
+            let ta = 1000;
+            let pa = 300;
+            let totalsalary = this.empsalary + ta + pa ;
+            // super.info();
+            document.write(`<h4> MANAGER class</h3>
+                name :${this.empname}<br>
+                age : ${this.empage}<br>
+                salary : ${this.totalsalary}<br>`);
+            
+        }
+     }
+     class test extends managers{
+
+     }
+ 
+    let aaa = new test("pratap singh",23,25000);
+    let aaaa = new employeess("ram singh",28,12000);
+    aaa.info(); 
+    aaaa.info();
+</script><br> -->
+
+<p>10.modules</p>
+<p> modulus is import from another file is a modulus</p>
+<p>eg.1(export)  file:main.js </p>
+<script>
+export{message,user,text};
+let message="es6 modules";
+function user(name){
+    return`hello ${name}`
+}
+class test{
+    constructor(){
+        console.log("constructor method");
+    }
+}
+</script>
+<p>eg.2(import)    file:library.js</p>
+<script>
+    import{message,user,text}from".library.js";
+    console.log(message);
+    console.log(user("pratap singh"));
+    let a = new test();
+</script>
+
+
+</body>
+</html>

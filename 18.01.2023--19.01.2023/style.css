@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    line-height: 1.4;
+    font-weight: 300;
+}
+.text{
+    padding-top: 25px;
+    margin: 0 55px;
+}
+.hero_section{
+    background-image: url(image/image.1.png);
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.text_container{
+    color: white;
+    max-width: 300px;
+    margin: 0 64px;
+    padding-top: 200px;
+    padding-bottom: 10px;
+    font-size: large;
+   font-size: 25px;
+}
+
+.white_box{
+    border: 2px solid;
+    padding: 10px;
+    max-width: 1520px;
+    /* height: 100px; */
+    background-color: black;
+    background-image: url(image/image.3.png),url(image/image.4.png),url(image/image.5.png);
+    background-position: left,left,right;
+    padding: 100px;
+    min-height: 10vh;
+    min-width: 10vx;
+    background-repeat: no-repeat;
+    display: flex;
+ 
+}
+.card{
+    max-width: 300px;
+    height: 10px;
+    margin: 70px 100px;
+}
+.card_contents{
+    max-width: 300px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.2);
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-left: 600px;
+    margin-bottom: 20px;
+}
+.texts{
+    max-width: 300px;
+    height: 1px;
+    margin: 30px 50px;
+}
+.words{
+    max-width: 300px;
+    height: 100px;
+    border-radius: 10px;
+    margin-left: 550px;
+    margin-bottom: 2px;
+}
+.works{
+    background-image: url(image/image.8.png);
+    background-repeat: no-repeat;
+    min-height: 10vh;
+    margin-left: 100px;
+    width:500 ;
+    height:600;
+}
+.card_content{
+    max-width: 350px;
+    margin: 70px 70px;
+    height: 1px;  
+}
+.cards{
+    max-width: 400px; 
+    margin-left: 500px;
+    height: 200px;
+    text-align: justify;  
+}
+.worksd{
+    background-image: url(image/image.9.png);
+    background-repeat: no-repeat;
+    min-height: 10vh;
+    margin-left: 550px;
+}
+.cardss{
+    max-width: 325px;
+    height: 0px;
+    margin-right: 600px;
+    margin: 10px -450px;
+}
+.card_contentsss{
+    max-width: 300px;
+    height: 150px;
+    border-radius: 25px;
+    box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.2);
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 600px;
+    margin-bottom: 20px;
+    margin: 100px 100px;
+}
+.worksds{
+    background-image: url(image/image.10.png);
+    background-repeat: no-repeat;
+    min-height: 10vh;
+    margin-left: 550px;
+}
+.cardsss{
+    max-width: 325px;
+    height: 0px;
+    margin-right: 600px;
+    margin: 10px -450px;
+}
+.card_contentssss{
+    max-width: 300px;
+    height: 150px;
+    border-radius: 25px;
+    box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.2);
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 600px;
+    margin-bottom: 20px;
+    margin: 100px 100px;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px1fr));
+    max-width: 500px;
+    margin-left: 50px;
+}
+.baba{
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit,minmax(320px1fr)); */
+    max-width: 70px;
+    
+}
+.PRODUCT{
+    margin-left: 50px;
+    padding-top: 70px;
+    height: 10px;
+    text-align: justify;
+}
+.SCOPING{
+    max-width: 180px; 
+    margin-left: 250px;
+    height: 1px;
+    text-align: justify;
+}
+.UX{
+    max-width: 110px; 
+    margin-left: 500px;
+    height: 1px;
+    text-align: justify;
+    
+}
+.CODE{
+    max-width: 120px; 
+    margin-left: 750px;
+    padding-bottom: 100px;
+}
+.new{
+    border: 5px solid;
+    padding: 70px;
+    max-width: 1000px;
+    height: 30px;
+    background-color: mistyrose;
+    /* box-shadow: 20px 10px green; */
+}
+.footer{
+    background-color: rgb(132, 157, 132);
+  
+    justify-content: center;
+    align-items: center;
+    /* margin: 30px 100px;  */
+}
+.phone_number{
+      margin-left: 50px;
+      padding-top: 50px;
+       max-width: 300px;
+}
+.addres{
+    margin-left: 1000px;
+    height: 10px;
+    text-align: justify;
+}
+.services{
+    margin-left: 50px;
+    padding-top: 70px;
+    height: 10px;
+    text-align: justify;
+}
+.HELP_AND_ADVICE{
+    margin-left: 250px;
+    height: 1px;
+    text-align: justify;
+   
+}
+.COMPANY{
+    margin-left: 550px;
+    height: 1px;
+    text-align: justify;
+}
+.get_in_touch{
+    margin-left: 850px;
+    padding-bottom: 100px;
+}
+
+
+/* .workss{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px1fr));
+    background-image: url(image/image.9.png);
+    background-repeat: no-repeat;
+    min-height: 10vh;
+}  */
+
+
+
+/* max-width: 300px;
+height: 10px;
+margin: 70px 100px; */
+
+
+/* max-width: 300px;
+height: 150px;
+border-radius: 10px;
+box-shadow: 3px 5px 5px rgba(1, 1, 1, 0.2);
+ display: flex;
+justify-content: center;
+align-items: center; 
+margin-left: 600px;
+margin-bottom: 20px; */
