@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol, iterators, generators</title>
+</head>
+<body>
+    <p>15.Advance js Symbol</p>
+<script>
+    var id1 = Symbol("hello");
+    var id2 = Symbol("hello");
+    console.log(id1===id2);
+    document.write(id1===id2);    // because symbol is unique value
+</script><br>
+
+<script>
+    var a = "hello";
+    var b ="hello";
+    document.write(a===b);
+    console.log(a===b);
+</script><br>
+
+<script>
+    let id = Symbol("hello");
+    console.log(id);                    // Symbol(hello)
+    // document.write(id);           
+    console.log(id.description);        //hello
+    // document.write(id.description);
+    // alert(id);                        //error
+    // alert(id.description);             //hello
+</script><br>
+
+<script>
+    let age = Symbol();
+    let user ={
+        name:"pratapsingh",
+        class:"B.E",
+        [age]:23,
+    }
+    console.log(user);
+</script><br>
+
+
+<script>
+    let ages = Symbol();
+    let users ={
+        name:"pratapsingh",
+        class:"B.E",
+    }
+   users[ages]=23;
+    console.log(users);
+    console.log(users.class);
+    console.log(users.ages);  //error can't call symbole directly
+    console.log(users[ages]); 
+</script><br>
+
+<script>
+     let agess = Symbol();
+    let userss ={
+        name:"pratapsingh",
+        class:"B.E",
+    }
+    userss[agess]=23;               //symbol can't print with (for in loop )directly bec its a unique
+    userss["gender"]='male';
+    for(let key in userss){
+        console.log(key);
+    }
+</script><br>
+<script>
+       let agessd = Symbol();
+    let usersss ={
+        name:"pratapsingh",
+        class:"B.E",
+    }
+    usersss[agessd]=23; 
+    usersss["gender"]='male';
+    console.log(usersss);
+    console.log(JSON.stringify(usersss));
+</script><br>
+
+<p>16.Advance js iterators</p>
+<script>
+    var x = ["apple","orange","grapes"];
+    let y = x[Symbol.iterator]();
+    console.log(y.next());
+    console.log(y.next());
+    console.log(y.next());
+    console.log(y.next());
+
+
+    var x = ["apple","orange","grapes"];
+    let i = x[Symbol.iterator]();
+    (i.next());
+    console.log(i.next().value);
+    console.log(i.next());
+   
+    var x = ["apple","orange","grapes"];
+    let o = x[Symbol.iterator]();
+    (o.next());
+    console.log("i am eating"+" "+(o.next().value));
+    // console.log(o.next().value);
+    console.log("i am eating");
+    console.log(o.next().value);
+
+    let number = [100,300,400,500,677,987,637,920,428];
+    let iter = number[Symbol.iterator]();
+    let result = iter.next();
+   while(!result.done){
+      console.log(result.value);
+      result = iter.next();
+   }
+
+   let str = "pratapsingh";
+   let iters = str[Symbol.iterator]();
+   let results = iters.next();
+   while(!results.done){
+      console.log(results.value);
+      results = iters.next();
+   }
+
+   let strs = "pratapsingh";
+   for(let char of strs){
+    console.log(char);
+   }
+</script><br>
+
+<P>17.Advance js generators</P>
+  <script>
+    function generators(){
+        console.log("FIRST MESSAGE");     // NORMAL FUNCTION
+        console.log("SECOND MESSAGE");
+    }
+    generators();
+</script><br>
+    
+<script>
+    function *generateit(){
+        console.log("FIRST MESSAGE");   
+        yield"yield No.1";
+        console.log("SECOND MESSAGE");
+        yield"yield No.2";
+    }
+    let g = generateit();
+    console.log(g.next());
+    console.log(g.next().value);
+</script><br> 
+
+<script>
+    function *generatorss(){ 
+        yield"yield No.1";
+        yield"yield No.2";
+        yield"yield No.3";
+        yield"yield No.4";
+        yield"yield No.5";
+        yield"yield No.6";
+        yield"yield No.7";
+    }
+    let p = generatorss();
+    for(let value of p){
+        console.log(value);
+    }
+</script><br> 
+
+<script>
+    function *generat(){
+        let NextNum = 100;
+        while(true){
+            yield(NextNum++);
+        }
+    }
+    let v = generat();
+    console.log(v.next().value);
+    console.log(v.next().value);
+    console.log(v.next().value);
+    console.log(v.next().value);
+    console.log(v.next().value);
+    
+    for(let values of v){
+        if(values>250) break;
+        console.log(values);
+    }
+</script><br>
+
+<script>
+      function *resultss(){
+        // let resultss = yield;
+        // let resultss = (yield)*10;
+        let resultss = [yield,yield,yield,yield];
+        console.log(`result ${resultss}`);
+      }
+      let h = resultss();
+      h.next();
+      h.next("PRATAP");
+      h.next(50);
+      h.next(500);
+      h.next(4500);
+</script><br>
+
+<script>
+    function *generate(){
+     yield 55;
+    //  yield["nodejs","angular js","react js"];
+     yield*["nodejs","angular js","react js"];
+    }
+    let gf = generate()
+    console.log(gf.next().value);
+    console.log(`frame work of js = ${gf.next().value}`);
+    console.log(`frame work of js =${gf.next().value}`);
+    console.log(`frame work of js =${gf.next().value}`);
+</script><br>
+
+<script>
+        function *generates(){
+     yield 55;
+     yield*["nodejs","angular js","react js"];
+    }
+    let gfd = generate()
+    console.log(gfd.next().value);
+    console.log(gfd.next().value);
+    console.log(...gfd);
+    // console.log([...gfd]);
+</script><br>
+</body>
+</html>
