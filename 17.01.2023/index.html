@@ -4,9 +4,200 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>strict mode, error handaling, scope chain</title>
 </head>
 <body>
-    
+
+    <p>strict mode</p>
+    <script>
+        a = 100;
+        console.log(a);
+    </script>
+    <script>
+        "use strict"
+         g = 67;               //g is not defined 
+         console.log(g);
+    </script>
+      <script>
+        "use strict"
+         var g = 67;
+         console.log(g);
+    </script>
+
+    <script>
+        a = 10;
+        function test(){
+            b = 20;
+        }
+        test();
+    </script>
+    <script>
+        "use strict"
+        aa = 10;
+        function test(){            //aa bb is not defined 
+            bb = 20;
+        }
+        test();
+    </script>
+      <script>
+        "use strict"
+        let aa = 10;
+        function test(){
+            let bb = 20;
+        }
+        test();
+    </script>
+     <script>
+        ah = 10;
+        function test(){
+            "use strict" 
+            bk = 20;      //bk is not defined 
+        }
+        test();
+    </script>
+
+<script>
+    "use strict" 
+    function test(a,b,b){       //Duplicate parameter name not allowed in this context
+        console.log(a+b+b);
+    }
+    test(10,20,60);
+</script>
+
+<script>
+    // "use strict" 
+    function test(a,b,b){       
+        console.log(a+b+b);
+    }
+    test(10,20,30);             // ans is 60 but we get 70 error
+</script>
+
+<script>
+    // "use strict" 
+    function test(a,b,c){       
+        console.log(a+b+c);
+    }
+    test(10,20,30);   
+</script>
+
+<p>error handaling</p>
+<script>
+    try{
+      console.log("start of try method");        // no eeror
+
+      console.log("end of try method");
+    }catch{
+        console.log("Error has occurred");
+    }
+</script>
+
+<script>
+    try{
+      console.log("start of try method");        // no eeror
+          person();
+      console.log("end of try method");
+    }catch{
+        console.log("Error has occurred");    // error person function is not defined
+    }
+</script>
+
+<script>
+    try{
+      console.log("start of try method");        // no eeror
+      person();
+      console.log("end of try method");
+    }catch(Error){
+        console.log(Error);
+    }                                        // error person function is not defined and it display line number
+</script>
+<script>
+    try{
+        person();
+    }catch(Error){
+        console.log(Error.name);
+        console.log(Error.message);     // error display line by line
+        console.log(Error.stack);
+    }
+</script>
+
+<script>
+    try{
+         data();
+    }catch(Error){
+      if(error instanceof ReferenceError){
+        console.log('ReferenceError');
+      }else if(error instanceof typeof ){
+        console.log('typeof');
+      }else{
+        console.log("unknown error");
+        
+      }
+    }
+</script>
+
+<script>
+    try{
+        let json = '{"name":"pratap singh","age":30}';
+        let user = JSON.parse(json)
+        console.log(user.name);
+        console.log(user.age);
+    }catch(Error){
+        console.log(Error);
+    }
+</script>
+
+<script>
+    try{
+        let json = '{"name:"pratap singh","age":30}';
+        let user = JSON.parse(json)
+        console.log(user.name);
+        console.log(user.age);
+    }catch(Error){
+        console.log(Error);
+    }
+</script>
+
+<p>The scope chain</p>
+<script>
+    function j(){
+        console.log(h);
+    }
+    var h = 10;
+      j();
+</script>
+
+<script>
+    function j(){
+        m();
+        function m(){
+            console.log(h);
+        }  
+    }
+    var h = 190;
+      j();
+</script>
+
+<script>
+    function j(){
+        var h = 189;
+        m();
+        function m(){
+            console.log(h);
+        }  
+    }
+      j();
+</script>
+
+<script>
+    function j(){
+        var hp = 19808;
+        m();
+        function m(){
+                                                         //error
+        }  
+    }
+    console.log(hp);
+      j();
+</script>
 </body>
 </html>
