@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json create  </title>
+</head>
+<body>
+    <p>1.creating json object</p>
+    <script>
+        var jsonobject ={
+            "firstname" : "pratapsingh",
+            "lastname" : "thakur",
+            "age" : 24,
+            "profession" : "web developer"
+        }
+        // document.write(jsonobject.firstname);
+
+//   modify value
+jsonobject.firstname = "pratap";
+
+//add new key value pair
+jsonobject.middelname = "singh"
+
+//delete key value pair
+delete jsonobject.middelname;
+
+        for(showalldata in jsonobject){  
+            document.write(jsonobject[showalldata]+"<br>");       //value
+            // document.write(showalldata+"<br>");               // key or property
+        }
+    </script><br>
+
+<p>2.creating arry object</p>
+<script>
+    var jsonobjects = {
+        "arry" : ["pratap", "singh","thakur"]
+    }
+    document.write(jsonobjects.arry+"<br>");
+</script><br>
+
+<p>3.creating arry object</p>
+<script>
+    var jsonobjectss ={
+        "fifa" : [
+            {"contryname": "brazil", "bestplayer" : "neymar"},
+            {"contryname": "portugal", "bestplayer" : "ronaldo"},
+            {"contryname": "argentina", "bestplayer" : "messi"}
+        ]
+    }
+    // document.write(jsonobjectss.fifa[0].bestplayer+"<br>");
+    // document.write(jsonobjectss.fifa[0].contryname+"<br>");
+    // document.write(jsonobjectss.fifa[1].bestplayer+"<br>");
+    // document.write(jsonobjectss.fifa[1].contryname+"<br>");
+    // document.write(jsonobjectss.fifa[2].bestplayer+"<br>");
+    // document.write(jsonobjectss.fifa[2].contryname+"<br>");
+
+    for(x in jsonobjectss.fifa){
+        // document.write(x);                           //x holding index value
+        for(inner_x in jsonobjectss.fifa[x]){  
+            // document.write(inner_x +"<br>");                //inner_x holding keys 
+            document.write(jsonobjectss.fifa[x][inner_x ]+"<br>")    //its holding keys and values
+        
+        }
+    }
+</script>
+</body>
+</html>
