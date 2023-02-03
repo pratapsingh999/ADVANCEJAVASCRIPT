@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string methods</title>
+</head>
+<body>
+    <!-- tolowercase() -->
+    <p>1.tolower case()</p>
+  <script>
+    var str = "PRATAP Singh";
+    var a = str.toLowerCase();
+    document.write(a);
+  </script>  
+
+  <!-- toupper case() -->
+  <p>2.toupper case() </p>
+  <script>
+    var str = "PRATAP Singh thakur";
+    var a = str.toUpperCase();
+    document.write(a);
+  </script>  
+
+  <!-- includes() -->
+  <p>3.includes()</p>
+  <script>
+        var str = "PRATAP Singh thakur";
+      var b = str.includes('Singh');
+    document.write(b);
+  </script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.includes('singh');
+document.write(b);
+</script>
+
+<!-- startswith() -->
+<p>4.startswith()</p>
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.startsWith('Singh');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.startsWith('PRATAP');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.startsWith('PRATAp');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.startsWith('thakur');
+document.write(b);
+</script><br>
+
+<!-- Endwith() -->
+<p>5.Endwith()</p>
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.endsWith('Singh');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.endsWith('PRATAP');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.endsWith('Thakur');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.endsWith('thakur');
+document.write(b);
+</script><br>
+
+<!-- search -->
+<p>6.search</p>
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.search('k');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.search('Z');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.search('S');
+document.write(b);
+</script><br>
+
+<script>
+    var str = "PRATAP Singh thakur";
+  var b = str.search('P');
+document.write(b);
+</script><br>
+
+<!-- MATCH() -->
+<p>7.math()</p>
+<script>
+    var text = "The rain in SPAIN stays mainly in the plain";    //A search for "ain" using a string:
+    var result = text.match("ain");  
+  document.write(result);
+    </script><br>
+
+<script>
+    var text = "The rain in SPAIN stays mainly in the plain";   //A search for "ain" using a regular expression:
+    var result = text.match(/ain/);
+    document.write(result);
+    </script><br>
+
+<script>
+var text = "The rain in SPAIN stays mainly in the plain";      //A global search for "ain":
+var result = text.match(/ain/g);
+  document.write(result);
+</script><br>
+    
+<script>
+    var text = "The rain in SPAIN stays mainly in the plain";   //A global, case-insensitive search:
+    var result = text.match(/ain/gi);
+    document.write(result);
+    </script>
+
+    <!-- indexof() -->
+    <p>8.indexof()</p>
+    <script>                          // it search from first
+            var text = "The rain in SPAIN stays mainly in the plain"; 
+            var result = text.indexOf("S");                             // including space 
+            document.write(result);
+    </script><br>
+
+<script>
+    var text = "The rain in SPAIN stays mainly in the plain"; 
+    var result = text.indexOf("IN");                             // including space 
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "The rain in SPAIN stays mainly in the plain"; 
+    var result = text.indexOf("in");                             // including space 
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "The rain in SPAIN stays mainly in the plain"; 
+    var result = text.indexOf("jk");                             // no match found returns -1
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world, welcome to the universe.";            //Search a string for "welcome"
+    var result = text.indexOf("welcome");
+    document.write(result);
+   </script><br>
+
+<script>  
+    var text = "Hello world, welcome to the universe.";            //Search a string for "Welcome"
+    var result = text.indexOf("Welcome");
+    document.write(result);
+    </script><br>
+
+<script>
+    var text = "Hello world, welcome to the universe.";             //Find the first occurrence of "e":
+    var result = text.indexOf("e");
+    document.write(result);
+    </script><br>
+
+<script>
+    var text = "Hello world, welcome to the universe.";             //Find the first occurrence of "e", starting at position 5:
+    var result = text.indexOf("e",5);
+    document.write(result);
+    </script><br>
+
+
+<!-- lastindexof -->
+<p>9.lastindexof</p>
+<script>                           // it search from last
+    var text = "The rain in SPAIN stays mainly in the plain"; 
+    var result = text.lastIndexOf("S");                             // including space 
+    document.write(result);
+</script><br>
+
+<script>
+var text = "The rain in SPAIN stays mainly in the plain"; 
+var result = text.lastIndexOf("IN");                             // including space 
+document.write(result);
+</script><br>
+
+<script>
+var text = "The rain in SPAIN stays mainly in the plain"; 
+var result = text.lastIndexOf("in");                             // including space 
+document.write(result);
+</script><br>
+
+<script>
+var text = "The rain in SPAIN stays mainly in the plain"; 
+var result = text.lastIndexOf("jk");                             // no match found returns -1
+document.write(result);
+</script><br>
+
+<script>
+  var text = "Hello planet earth, you are a great planet.";    // it returns last index position
+  var result = text.lastIndexOf("planet");
+    document.write(result);
+    </script><br>
+    
+<script>
+    var text = "Hello planet earth, you are a great planet.";    // it returns last index position
+    var result = text.lastIndexOf("Planet");                      // no match found returns -1
+      document.write(result);
+      </script><br>
+
+<script>
+    let text = "Hello planet earth, you are a great planet.";     //Search for the last occurrence of "planet", starting at position 20:
+    let result = text.lastIndexOf("planet", 20);
+    document.write(result);
+    </script>
+
+    <!-- replace() -->
+<p>10.replace()</p>
+<script>
+var text = "Visit Microsoft!";                               //Replace Microsoft:
+var result = text.replace("Microsoft", "amazon");
+document.write(result);
+</script><br>
+
+<script> 
+var text = "Mr Blue has a blue house and a blue car";        //A global replacement:
+document.write(text+"<br>");
+var result = text.replace(/blue/g, "red");
+    document.write(result);
+    </script><br>
+
+<script> 
+    var text = "Mr Blue has a blue house and a blue car";        //A global replacement:
+    var result = text.replace(/blue/gi, "red");
+        document.write(result);
+        </script>
+   <!-- trim() -->
+<p>11.trim()</p>
+<script>
+    var text = "              Hello World!     ";                  //trim the space
+    // alert(text);
+    document.write(text+"<br>");
+    var result = text.trim();
+    // alert(result);
+    document.write(result);
+    </script><br>
+
+    <script>                                                           //trim the space
+        var text = "    Hello      World!    ";
+        document.write(text+"<br>");
+var result = text.replace(/^\s+|\s+$/gm,'');
+document.write(result);
+    </script>
+
+    <!-- charAt() -->
+    <p>12.charAt()</p>
+    <script>
+        var text = "HELLO WORLD";                              //Get the first character in a string:
+        var letter = text.charAt(0);
+        document.write(letter);
+    </script><br>
+
+    <script>
+         var text = "HELLO WORLD";                              //Get the second character in a string:
+        var letter = text.charAt(1);
+        document.write(letter);
+    </script><br>
+
+    <script>
+        var text = "HELLO WORLD";                                 //Get the last character in a string:
+        var letter = text.charAt(text.length-1);
+        document.write(letter);
+    </script><br>
+
+    <!-- charcodeAt() -->
+    <p>13.charcodeAt()</p>
+    <script> 
+        var text = "HELLO WORLD";                                 //Get the Unicode of the first character in a string:
+        var code = text.charCodeAt(0);                              
+        document.write(code);
+    </script><br>
+
+    <script>
+      var text = "HELLO WORLD";                                   //Get the Unicode of the second character in a string:
+      var code = text.charCodeAt(1);
+      document.write(code);
+    </script><br>
+
+    <script>
+        var text = "HELLO WORLD";                                  //Get the Unicode of the last character in a string:
+        var code = text.charCodeAt(text.length-1);
+        document.write(code);
+    </script><br>
+
+    <script>
+        var text = "HELLO WORLD";                                   //Get the Unicode of the 15th character:
+        var code = text.charCodeAt(15);
+        document.write(code);
+    </script><br>
+
+    <!-- fromcharcode -->
+    <p>14.fromcharcode</p>
+    <script>
+        var char = String.fromCharCode(65);
+        document.write(char);
+    </script><br>
+
+<script>
+    var text = String.fromCharCode(72, 69, 76, 76, 79);
+    document.write(text);
+    // document.write(text+"<br>")+"<br>";
+</script><br>
+
+<!-- concat() -->
+<p>15.concat()</p>
+<script>
+    var text1 = "sea";
+    var text2 = "food";
+    var result = text1.concat(text2);
+    document.write(result);
+    </script><br>
+
+<script>
+    var text1 = "sea";
+    var text2 = "food";
+    var text3 = "is best"
+    var result = text1.concat(text2," ",text3);
+    document.write(result);
+    </script><br>
+
+<script>
+    var text1 = "Hello";
+    var text2 = "world!";
+    var result = text1.concat(" ", text2);
+    document.write(result);
+    </script><br>
+
+    <!-- split() -->
+    <p>16.split()</p>
+    <script>       
+    var text = "How are you doing today?";           //it returns How,are,you,doing,today?
+    var myArray = text.split(" ");
+document.write(myArray);
+</script><br>
+
+<script>
+    var text = "How are you doing today?";                // it returns doing
+       var myArray = text.split(" ");
+       document.write(myArray[3]);
+   </script>
+
+<script>
+    var text = "How are you doing today?";
+    var myArray = text.split("");
+    // var word = myArray[1];
+    // var word = myArray[2];
+    // var word = myArray[3];
+    document.write(myArray[6]+"<br>");                 // it returns W
+    // document.write(myArray[3]);            
+    // document.write(word);
+    // document.write(word);
+</script><br>
+
+<script>
+    var text = "How are you doing today?";      //it returns H,o,w, ,a,r,e, ,y,o,u, ,d,o,i,n,g, ,t,o,d,a,y,?
+    var myArray = text.split("");
+    document.write(myArray);
+    </script><br>
+
+    <script>
+var text = "How are you doing today?";
+var myArray = text.split(" ", 3);                  // it returns How,are,you
+document.write(myArray)
+</script><br>
+
+<script>
+    var text = "How are you doing today?";       // it returns  H,w are y,u d,ing t,day?
+    var myArray = text.split("o");
+    document.write(myArray)
+    </script><br>
+
+<script>
+    var text = "How are you doing today?";       // it returns How are you doing today?
+    var myArray = text.split();
+    document.write(myArray);
+    </script>
+
+<!-- repeat() -->
+<p>17.repeat()</p>
+<script>
+    var text = "Hello world!";
+    var result = text.repeat(2);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.repeat(10);
+    document.write(result);
+</script>
+
+<!-- slice() -->
+<p>18.slice()</p>
+<script>
+    var text = "Hello world!";
+    var result = text.slice(0, 5);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.slice(3, 8);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.slice(5);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.slice(3);
+    document.write(result);
+</script><br>
+
+<!-- substr() -->
+<p>19.substr()</p>
+<script>
+    var text = "Hello world!";
+    // document.write(text);
+    var result = text.substr(1, 4);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.substr(2);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.substr(0,1);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.substr(-1,1);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.substr(-6,6);
+    document.write(result);
+</script><br>
+
+<!-- substring() -->
+<p>20.substring()</p>
+<script>
+    var text = "Hello world!";
+    var result = text.substr(1, 4);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.substr(2);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.substr(0, 1);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.substr(-1,1);
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello world!";
+    var result = text.substr(-6,6);
+    document.write(result);
+</script><br>
+
+<!-- tostring() -->
+<p>21.tostring() </p>
+<script>
+    var text = "Hello World!";
+    var result = text.toString();                    //Get the content of the text:
+    document.write(result);
+</script><br>
+
+<script>
+    var text = "Hello World!";                     //Get the content of the text:
+    var result = text
+    document.write(result);
+</script><br>
+
+<script>
+var text = new String("Hello World!");             //Get the content of the text:
+var result = text.toString();
+document.write(result);
+</script><br>
+
+<script>
+     var str = 50;
+     var a = str.toString();
+     document.write(a+5+"<br>");                               //Get the content of the text:
+     document.write(a+05+"<br>");
+     document.write(a+50+"<br>");
+</script><br>
+
+<!-- valueof() -->
+<p>22.valueof()</p>
+<script>
+    var text = "Hello World!";
+    var result = text.valueOf();        //Get the value of a text:
+    document.write(result);
+    </script><br>
+
+    <script>
+        var text = "Hello World!";      //Get the value of a text:
+        var result = text;
+        document.write(result);
+    </script><br>
+
+    <script>
+        var text = new String("Hello World!");       //Get the value of a text:
+        var result = text.valueOf();
+        document.write(result);
+    </script>
+</body>
+</html>

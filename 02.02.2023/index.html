@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array method</title>
+</head>
+<body>
+
+<!-- Push() -->
+<p>1.Push()</p>
+<script>
+   var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];   
+        document.write(a+"<br><br>");
+        a.pop()
+        document.write(a+"<br><br>");
+</script>
+
+<!-- Pop() -->
+<p>2.Pop()</p>
+<script>
+    var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];   
+        document.write(a+"<br><br>");
+        a.push("gowda")
+        document.write(a+"<br><br>");
+</script>
+
+<!-- Unshift()-->
+<p>3.Unshift()</p>
+<script>
+    var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+        document.write(a+"<br><br>");
+        a.shift()
+        document.write(a+"<br><br>");
+</script>
+
+<!-- Shift()  -->
+<p>4.Shift()</p>
+<script>
+      var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+        document.write(a+"<br><br>");
+        a.unshift("bhai")
+        document.write(a+"<br><br>");
+</script>
+
+<!-- Concat()-->
+<p>5.Concat()</p>
+
+<script>
+  var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+  document.write(a+"<br><br>");
+    var b=["sonu", "sharanu"]; 
+    var c=a.concat(b);
+           document.write(c+"<br><br>");
+</script>
+
+ <!-- Join()  -->
+<p>6.Join()</p>
+<script>
+     var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+     document.write(a+"<br><br>");
+    var d=a.join("-");
+           document.write(d+"<br><br>")
+</script>
+
+<!-- Slice() -->
+<p>7.Slice()</p>
+
+<script>
+   var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+        document.write(a+"<br><br>");
+    var b=a.slice(1,3)
+        document.write(b+"<br><br>");
+</script>
+
+<!-- Splice() -->
+<p>8.Splice()</p>
+<script>
+          var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+        document.write(a+"<br><br>");
+        a.splice(2,2,"singh")
+        document.write(a)
+</script>
+
+<!-- sort() -->
+<p>9.sort()</p>
+<script>
+ var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+        document.write(a+"<br><br>");
+       a.sort()
+       document.write(a+"<br><br>");
+    
+</script><br>
+
+<!-- reverse() -->
+<p>10.reverse()</p>
+<script>
+     var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+        document.write(a+"<br><br>");
+        a.reverse()
+       document.write(a+"<br>");
+</script>
+
+<!-- Array.isArray() -->
+<p>11.Array.isArray()</p>
+
+ <script>
+   var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+   document.write(a+"<br><br>");
+   var b = Array.isArray(a);
+   document.write(b);
+     if(Array.isArray(a)){
+     document.write("this is an array");
+     }
+     else{
+        document.write("this is not an array"); 
+     }
+</script><br> <br>
+
+
+ <script>
+    var aa=[10,34,56,78];
+    document.write(aa+"<br><br>");
+    var b = Array.isArray(aa);
+    document.write(b);
+      if(Array.isArray(aa)){
+      document.write("this is an array");
+      }
+      else{
+         document.write("this is not an array"); 
+      }
+ </script> 
+
+<!-- indexOf() -->
+<p>12.indexOf()</p>
+<script>
+        var a=["pratapsingh", "akash", "aditya", "praveen", "akash","shantu" ];
+        document.write(a+"<br><br>");
+        var b=a.indexOf("akash");
+        document.write(b+"<br><br>");
+</script><br>
+<script>
+    var a=["pratapsingh", "sharnu", "aditya", "praveen","akash" ];
+    document.write(a+"<br><br>");
+    var b=a.indexOf("akash");
+    document.write(b+"<br><br>");
+</script>
+
+<!--LastIndexOf() -->
+<p>13.LastIndexOf()</p>
+<script>
+      var a=["pratapsingh", "akash", "aditya", "praveen", "akash", "shantu" ];
+        document.write(a+"<br><br>");
+    var b= a.lastIndexOf("akash");
+        document.write(b+"<br><br>");
+</script><br>
+
+<script>
+    var t=["pratapsingh", "aditya", "akash", "praveen", "shantu" ];
+      document.write(t+"<br><br>");
+  var b= t.lastIndexOf("akash");
+      document.write(b+"<br><br>");
+</script>
+
+<!-- includes -->
+<p>14.includes</p>
+<script>
+      var t=["pratapsingh", "aditya", "akash", "praveen", "shantu" ];
+      document.write(t+"<br><br>");
+      var b= t.includes("akash");
+      document.write(b+"<br><br>");
+      var b= t.includes("baba");
+      document.write(b+"<br><br>");
+</script>
+
+<!-- some() -->
+<p>15.some()</p>
+<script>
+       var a=[10,20,13,40];
+        document.write(a+"<br><br>");
+        var b = a.some(check);
+        document.write(b+"<br><br>");
+        function check(a){
+        return  a >= 18;
+        }
+</script><br>
+
+<script>
+    var a=[10,0,13,09];
+     document.write(a+"<br><br>");
+     var b = a.some(check);
+     document.write(b+"<br><br>");
+     function check(a){
+     return  a >= 18;
+     }
+</script>
+
+<!-- every() -->
+<p>16.every()</p>
+<script>
+      var a=[10,20,13,40];
+        document.write(a+"<br><br>");
+    var b = a.every(check);
+        document.write(b+"<br><br>");
+
+        function check(a){
+        return  a >= 18;
+        }
+</script><br>
+
+<script>
+    var a=[18,20,23,40];
+      document.write(a+"<br><br>");
+  var b = a.every(check);
+      document.write(b+"<br><br>");
+
+      function check(a){
+      return  a >= 18;
+      }
+</script>
+
+<!-- Find() -->
+<p>17.Find()</p>
+<script>
+   var age=[10,20,13,40];
+        document.write(a+"<br><br>");
+    var men=age.find(check);
+        document.write(men+"<br><br>");
+        function check(age){
+            return age >=18;
+        }
+</script><br>
+
+<script>
+    var age=[10,17,16,40];
+         document.write(age+"<br><br>");
+     var men=age.find(check);
+         document.write(men+"<br><br>");
+         function check(age){
+             return age >=18;
+         }
+ </script>
+
+<!-- findIndex() -->
+<p>18.findIndex()</p>
+<script>
+           var a=[10,20,13,40];
+        document.write(a+"<br><br>");
+     var b=a.findIndex(check);
+        document.write(b+"<br><br>");
+        function check(a){
+            return a >=18;
+        }
+</script><br>
+
+<script>
+    var age=[10,17,16,40];
+         document.write(age+"<br><br>");
+     var men=age.findIndex(check);
+         document.write(men+"<br><br>");
+         function check(age){
+             return age >=18;
+         }
+ </script>
+
+ <!-- toString -->
+ <p>19.toString</p>
+<script>
+    var t=["pratapsingh", "aditya", "akash", "praveen", "shantu" ];
+    //   document.write(t+"<br><br>");                     // it convert to string
+    var c =  t.toString();
+      document.write(c+"<br><br>");
+</script>
+
+<!-- value of -->
+<p>20.value of</p>
+<script>
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const myArray = fruits.valueOf();
+document.write(myArray);                                 // valueof and document.write both are same
+</script>
+
+<!-- fill -->
+<p>21.fill</p>
+<script>
+    const fruit = ["Banana", "Orange", "Apple", "Mango"];
+    fruit.fill("bananna");
+    document.write(fruit);
+</script>
+
+//forEach()
+<p>22.forEach()</p>
+<script>
+var a=["pratapsingh", "akash", "aditya", "praveen", "shantu" ];
+            a.forEach(function (value, index){
+                document.write(index+" : "+value+"<br>");
+            })
+            </script> 
+</body>
+</html>
