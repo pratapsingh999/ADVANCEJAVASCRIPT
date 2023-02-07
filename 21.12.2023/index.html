@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment operators, comparision operators, Conditional operator ,logical operators </title>
+</head>
+<body>
+    <!-- <h1>Arithmetic operator</h1>
+    <p>1.addition(+)</p>
+<script>
+    var a = 300;
+    var b = 600.8;
+     c = a+b
+    document.write(c);
+
+</script>
+
+<p>2.subtraction(-)</p>
+<script>
+ var a = 3000;
+    var b = 60.8;
+     c = a-b
+    document.write(c);
+</script>
+
+<p>3.multiplication(*)</p>
+<script>
+ var a = 980;
+    var b = 60;
+     c = a*b
+    document.write(c);
+</script>
+
+<p>4.division(/)</p>
+<script>
+ var a = 300;
+    var b = 780.8;
+     c = a/b
+    document.write(c);
+</script>
+
+<p>5.exponentiation(**)</p>
+<script>
+var a = 3;
+    var b = 4;  
+     c = a**b   //3*3*3*3
+    document.write(c);
+
+</script>
+
+<p>6.modulus(%)</p>
+<script>
+var a = 300;
+    var b = 780.8;
+     c = a%b
+    document.write(c);
+</script>
+
+<p>7.increment(++)</p>
+<script>
+var a = 10;
+    var b = 20;
+        a++;
+    document.write(a+b);
+</script>
+
+<p>8.decrement(--)</p>
+<script>
+var a = 50;
+    var b = 30;
+     a--
+    document.write(a-b);
+</script> -->
+
+<h1>1.Assignment operator</h1>
+<script>
+    var a = 20;
+    var b = 89;
+     a+=b;
+document.write(a);
+</script><br>
+
+<script>
+    var a = 20;
+    var b = 89;
+     a-=b;
+document.write(a);
+</script><br>
+
+<script>
+    var a = 20;
+    var b = 89;
+     a*=b;
+document.write(a);
+</script><br>
+
+<script>
+    var a = 20;
+    var b = 89;
+     a/=b;
+document.write(a);
+</script><br>
+
+<script>
+    var a = 20;
+    var b = 89;
+     a%=b;
+document.write(a);
+</script><br>
+
+<script>
+    var a = 20;
+    var b = 89;
+     a**=b;
+document.write(a);
+</script><br><br><br><br>
+
+
+<h1>2.comparision operators</h1>
+<p>1.Equal to</p>
+<script>
+    let a = 5;
+    document.write((a==5)+"<br>");  //true
+    let b = 6;
+    document.write((b=="6")+"<br>");  //true
+    let than = 7;
+    document.write((than==8)+"<br>"); //false
+</script><br>
+
+<p>2.Equal value and equal type</p>
+<script>
+var o = 5;
+document.write((o===5)+"<br>");  //true
+var t = 6;
+    document.write((t==="6")+"<br>");  //false
+var j = 7;
+    document.write((j===8)+"<br>");  //false
+</script><br>
+
+<p>3.Not Equal to</p>
+<script>
+    var hj = 8;
+    document.write((hj!=8)+"<br>");   //false
+    var hj = 8;
+    document.write((hj!=7)+"<br>");  //true
+
+</script><br>
+
+<p>4.Not Equal value and not equal type</p>
+<script>
+    var g = 8
+    document.write((hj!==8)+"<br>"); //false
+    var g = 8
+    document.write((hj!=="8")+"<br>"); //true
+    var g = 5
+    document.write((hj!=="8")+"<br>"); //true
+</script><br>
+
+<p>5.greater than</p>
+<script>
+ var p = 5
+    document.write((p > 8)+"<br>"); //false
+    var p = 5
+    document.write((p > 3)+"<br>"); //true
+</script><br>
+
+<p>6.less than</p>
+<script>
+     var p = 5
+    document.write((p < 8)+"<br>"); //true
+    var p = 5
+    document.write((p < 3)+"<br>"); //false
+
+</script><br>
+
+<p>7.greater than or equal to</p>
+<script>
+     var p = 5
+    document.write((p >= 8)+"<br>"); //false
+    var p = 5
+    document.write((p >= 3)+"<br>"); //true
+
+
+</script><br>
+
+<p>8.less than or equal to</p>
+<script>
+     var p = 5
+    document.write((p <= 8)+"<br>"); //true
+    var p = 5
+    document.write((p <= 3)+"<br>"); //false
+
+</script><br><br><br><br>
+
+<h1>3.Conditional operator</h1>
+<script>
+    var a = 100;
+    var b;
+    (a==100)? b="true": b="false";
+    document.write(b);
+</script><br><br><br><br>
+
+<h1>4.logical operators</h1>
+<script>
+    var a = 6;
+    var b = 3;
+    document.write((a<10 && b>1)+"<br>"); //true
+        document.write((a<10 && b<1)+"<br>");  //false
+</script>
+
+<p>2.logical OR operator</p>
+<SCript>
+    let c = 6;
+    let d = 3;
+    document.write((c==5||d==5)+"<br>");   //false
+    document.write((c==6||d==0)+"<br>");  //true
+    document.write((c==0||d==3)+"<br>");  //true
+    document.write((c==6||d==3)+"<br>");  //true
+</SCript>
+
+<p>3.logical NOT operator</p>
+<SCript>
+ let e = 6;
+ let f = 3;
+ document.write(!(e===f)+"<br>");  //true
+ document.write(!(e>f)+"<br>");     //false
+</SCript>
+</body>
+</html>

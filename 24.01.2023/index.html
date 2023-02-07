@@ -112,7 +112,7 @@ console.log(v);      //min value
 document.write(v);
 </script><br> -->
 
-<script>
+<!-- <script>
   
         function nearestLarger(arr) {
             let result = {};
@@ -133,7 +133,7 @@ document.write(v);
         }
         let arr = [1,4,3,2,5,7];
         document.write(nearestLarger(arr));
-</script><br>
+</script><br> -->
 
 <p>12).Exercise</p>
 <script>
@@ -151,6 +151,28 @@ document.write(v);
         console.log(persistence(4));
 </script><br>
 
+
+<script>
+          function nearestLarger(arr) {
+            let result = {};
+            for (let i = 0; i < arr.length; i++) {
+                let nearest = null;
+                let nearestDistance = Number.MAX_SAFE_INTEGER;
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] > arr[i]) {
+                        if (j - i < nearestDistance) {
+                            nearest = arr[j];
+                            nearestDistance = j - i;
+                        }
+                    }
+                }
+                result[arr[i]] = nearest;
+            }
+            return result;
+        }
+        let arr = [1,4,3,2,5,7];
+        document.write(nearestLarger(arr));
+</script>
 
 </body>
 </html>

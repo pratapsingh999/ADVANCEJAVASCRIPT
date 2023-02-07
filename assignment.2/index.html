@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment.2</title>
+</head>
+<body>
+<p> (III) 3).Exercise - String Concatenation</p>
+   
+    <p>1.Create a variable called greeting. Store the value 'hello' in it</p>
+     <script>
+        var greeting = "hello";
+        function display() {
+            return greeting;
+    
+        }
+        console.log( display());
+        document.write(greeting);
+    </script><br>
+    
+    <script>
+        let greetingS = "";
+        displayS = function() {
+          return "Hello";
+        }
+        console.log( displayS());
+        document.write( displayS());
+        </script><br>
+    
+     <SCript>
+           var greetingss = "Hello";
+           document.write(greetingss);
+           console.log(greetingss);
+        </SCript><br>
+       
+    <p>2.Create a variable called name. Store the value 'world' in it.</p>
+    <SCript>
+        var name = "world";
+        console.log(name);
+        document.write(name);
+     </SCript><br>
+    
+     <p>3.Use your variables to alert "hello world".</p>
+    <!-- 
+     <script>
+        var names = "hello world"
+        alert(names);
+     </script><br> -->
+    
+     <p>4.Use a couple of regex to change the output to "he110 w0r1d"</p>
+     <script>
+            var a = "hello world";
+             var b = a.replaceAll('l', '1');
+             var c = b.replaceAll('o','0');
+             document.write(c);;
+     </script><br>
+    
+     <p>5.Use a couple more functions to reverse the result.</p>
+    
+     <script>
+     var name = "pratapsingh";
+     var revarname = "";
+    for (let i = name.length - 1; i >= 0; i--) {
+        revarname += name[i];
+    }
+    document.write(revarname);
+    console.log(revarname);
+     </script><br>
+    
+<p>(IV) 4).Exercise - Conditional logic</p>
+
+        <p>1.Create a little program that tells you if it's the morning, afternoon or night.</p>
+       <script>
+          var day = new Date();
+            var hr = day.getHours();
+            if (hr >= 0 && hr < 12) {
+                document.write("Good Morning!");
+            } else if (hr >= 12 && hr <= 17) {
+                document.write("Good Afternoon!");
+            } else {
+                document.write("Good Evening!");
+            }
+     </script><br>
+     <SCript>
+        var day = new Date();
+        var hr = "";
+            // var hr = day.getHours();
+            if (hr >= 0 && hr < 12) {
+                document.write("Good Morning!");
+            } else if (hr >= 12 && hr <= 17) {
+                document.write("Good Afternoon!");
+            } else {
+                document.write("Good Evening!");
+            }
+            document.write(hr(8));
+     </SCript><br>
+     
+<p>(V) 5.Exercise - A Sandwich Calculator</p>
+     <script>    
+        function sandwichCalculator(bread, cheese) {
+            return Math.min(Math.floor(bread / 2), Math.floor(cheese));
+        }
+            document.write(sandwichCalculator(10, 5)+"<br>"); 
+            console.log(sandwichCalculator(10, 5)); 
+            document.write(sandwichCalculator(10, 1)+"<br>"); 
+            console.log(sandwichCalculator(10, 1)); 
+            document.write(sandwichCalculator(10, 6)+"<br>"); 
+            console.log(sandwichCalculator(10, 6));
+            document.write(sandwichCalculator(10, 4)+"<br>");  
+            console.log(sandwichCalculator(10, 4)); 
+     </script><br>
+    
+ <p> (VI)6).Exercise - Guess the output</p>
+    <script>
+        1.
+        var a = 12;
+    (function() {
+     console.log(a);
+    })();
+    
+    2.
+    var a = 12;
+    (function() {
+     console.log(a);
+    })();
+    
+    3
+    var a = 10;
+    var x = (function() {
+     var a = 12;
+     return (function() {
+       console.log(a);
+       document.write(a);
+     });
+    })();
+    x();
+    
+    4.
+    var a = 10;
+    var x = (function() {
+     var y = function() {
+       var a = 12;
+     };
+     return function() {
+       console.log(a);
+     }
+    })();
+    x();
+    
+    5.
+    var a = 10;
+    var x = (function() {
+     (function() {
+       a = 12; // <<< look carefully at this line.
+     })();
+     return (function() {
+       console.log(a);
+     });
+    })();
+    x();
+    
+    6.
+    var a = 10;
+    (function() {
+     var a = 15;
+     window.x = function() {
+       console.log(a);
+     }
+    })();
+    x();
+    </script><br>
+
+<p>(VII) 7)Exercise - Pizza</p>
+
+   <script>
+       var toppings = ['A','tasty','pizza','with','Cheese','and','Ham','and','Bits','and','Tomatoes'];
+       function makePizza(){
+        return toppings
+       }
+      document.write(makePizza(toppings)+"<br>");
+
+      var toppingss = ['A','tasty','pizza','with','Cheese','and','Ham','and','Bits','and','Tomatoes'];
+      var b = toppingss.toString();
+      document.write(b+"<br>");
+
+      var toppingss = ['A','tasty','pizza','with','Cheese','and','Ham','and','Bits','and','Tomatoes'];
+      var b = toppingss.join(" ");
+     document.write(b+"<br>");
+  </script><br>
+
+<p>(VIII) 8)Exercise - Capitalise every element</p>
+
+<script>
+    var a = [ "pratap","singh","thakur"];
+    const Capitalise = a.map(element => {
+  return element.toUpperCase();
+});
+    document.write(Capitalise);
+    console.log(Capitalise);
+</script><br>
+
+<script>
+    var ab = [ "pratap","singh","thakur"];
+    var re = ab.toString().toUpperCase();
+    document.write(re);
+ 
+</script><br>
+
+<p>(IX) 9)Exercise - Array Strings</p>
+
+ <p>1.Write a function that takes a list of strings an prints them, one per line, in a rectangular frame</p>
+<script>
+  const name =  ["Hello", "World", "in", "a", "frame"];
+  console.log(name[0]);
+  console.log(name[1]);
+  console.log(name[2]);
+  console.log(name[3]);
+  console.log(name[4])
+  document.write("*" + name[0]+"*" +"<br>");
+  document.write(name[1]+"<br>");
+  document.write(name[2]+"<br>");
+  document.write(name[3]+"<br>");
+  document.write(name[4]+"<br>");
+  
+</script><br>
+<!-- <script>
+var x = "Hello world in a frame";
+function star(str) {
+  let arr = [];
+  arr = str.split(" ");
+  for (let i = 0; i < 1; i++) {
+    for (let j = 0; j <= arr.length; j++) {
+     arr == arr[j].split(" ");
+      console.log("*" + arr[j] + "*" );
+    }
+  }
+  return arr;
+}
+console.log(star(x))
+ </script><br>   -->
+
+<script>
+  var x = ["Hello", "World", "in", "a", "frame"];
+  function stars(str) {
+    let arr = [];
+    arr = str;
+  for (let i = 0; i < 1; i++) {
+    for (let j = 0; j <= arr.length-1; j++) {
+      console.log("*" + arr[j] + "*");
+      document.write("*" + arr[j] + "*" +"<br>");
+    }
+  }
+}
+stars(x);
+</script><br>
+
+<p>(X) 10)Exercise - Array Strings</p>
+<p></p>
+<!-- <script>
+  function pigIt(str){
+  let strArr = str.split(' ');
+  let pigLatin = [];
+  for(let word of strArr){
+    if((/([a-zA-Z])/).test(word)){
+      pigLatin.push(word.substring(1) + word[0] + "ay");
+    }else{
+      pigLatin.push(word);
+    }
+  }
+  return pigLatin.join(" ");
+}
+pigIt();
+console.log(pigIt("oratapp"));
+</script><br>   -->
+
+<script>
+  const pigLatinSentence = (s) => {
+       let ans = "";
+       for (let i = 0; i < s.length; i++) {
+           let j = i;
+           if (i >= s.length)
+               break;
+           while (i < s.length && s.charAt(i) != ' ')
+               i++;
+           if (ans.length === 0) {
+               ans = ans + s.substring(j + 1, i) + s.charAt(j) + "ay";
+           }
+           else {
+               ans = ans + " " + s.substring(j + 1, i) + s.charAt(j) + "ay";
+           }
+       }
+       return ans;
+   }
+ 
+   // Driver code
+ 
+   let s = "sally knows best";
+   document.write(pigLatinSentence(s))
+</script><br>
+
+ 
+<script>
+          function translateToPigLatin(text) {
+        
+        let words = text.split(" ");
+        
+        let pigLatinWords = words.map(word => {
+            let firstLetter = word[0];
+            let restOfWord = word.slice(1);
+            return restOfWord + firstLetter + "ay";
+        });
+        
+        return pigLatinWords.join(" ");
+        }
+
+        function translateToEnglish(text) {
+            let words = text.split(" ");
+            let englishWords = words.map(word => {
+                let lastLetters = word.slice(-3);
+                let restOfWord = word.slice(0, -3);
+                return lastLetters.slice(0, -2) + restOfWord;
+            });
+            return englishWords.join(" ");
+        }
+        let text = "The quick brown fox";
+        document.write(translateToPigLatin(text)+"<br>"); 
+        document.write(translateToEnglish("Hetay uickqay rownbay oxfay"))
+</script>
+
+<p>(XI) 11)Exercise - Array Strings</p>
+<p></p>
+<!-- <script>
+var a = [1,4,3,2,5,7];
+var v = a.sort().pop();   //max value 
+console.log(v);      //min value
+document.write(v);
+</script><br> -->
+
+<!-- <script>
+  
+        function nearestLarger(arr) {
+            let result = {};
+            for (let i = 0; i < arr.length; i++) {
+                let nearest = null;
+                let nearestDistance = Number.MAX_SAFE_INTEGER;
+                for (let j = i + 1; j < arr.length; j++) {
+                    if (arr[j] > arr[i]) {
+                        if (j - i < nearestDistance) {
+                            nearest = arr[j];
+                            nearestDistance = j - i;
+                        }
+                    }
+                }
+                result[arr[i]] = nearest;
+            }
+            return result;
+        }
+        let arr = [1,4,3,2,5,7];
+        document.write(nearestLarger(arr));
+</script><br> -->
+<script>
+var Number = [1,4,3,2,5,7];
+var largenumber = Number.sort().pop();
+document.write(largenumber);
+</script><br>
+
+<script>
+var arry = [1,4,3,2,5,7];
+var results = arry.reduce(function(max,curr){
+  if(curr>max){
+    max=curr;
+  }
+  return max;
+},0)
+console.log(results);
+document.write(results+"<br>");
+</script>
+
+<p>(XII) 12).Exercise</p>
+<script>
+  
+        function persistence(num) {
+            let count = 0;
+            while (num >= 10) {
+                num = num.toString().split('').reduce((a, b) => a * b);
+                count++;
+            }
+            return count;
+          }
+          document.write(persistence(999)+"<br>");
+        console.log(persistence(999));
+        document.write(persistence(39)+"<br>");
+        console.log(persistence(39));
+        document.write(persistence(4)+"<br>");
+        console.log(persistence(4));
+    </script><br>
+
+
+<p>(XV) 15.exercise</p>
+    <script>
+        function measureDepth(arr) {
+            let depth = 0;
+            while (Array.isArray(arr)) {
+                depth++;
+                arr = arr[0];
+            }
+            return depth;
+        }
+        console.log(measureDepth([[[[[[[[[[[[[]]]]]]]]]]]]])); 
+        document.write(measureDepth([[[[[[[[[[[[[]]]]]]]]]]]]]));        
+    </script><br>
+
+<script>
+    function measureDepth(arr) {
+        let depth = 0;
+        while (Array.isArray(arr)) {
+            depth++;
+            arr = arr[0];
+        }
+        return depth;
+    }
+    console.log(measureDepth([[[]]]));  
+    document.write(measureDepth([[[]]]));           
+</script><br>
+
+<script>
+    function measureDepth(arr) {
+        let depth = 0;
+        while (Array.isArray(arr)) {
+            depth++;
+            arr = arr[0];
+        }
+        return depth;
+    }
+    console.log(measureDepth([[]]));
+    document.write(measureDepth([[]]));
+</script><br>
+
+<script>
+    function measureDepth(arr) {
+        let depth = 0;
+        while (Array.isArray(arr)) {
+            depth++;
+            arr = arr[0];
+        }
+        return depth;
+    }
+    console.log(measureDepth([]));   
+    document.write(` measureDepth ${measureDepth([])}`);           
+</script><br>
+
+
+</body>
+</html>
