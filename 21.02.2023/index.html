@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date and time</title>
+</head>
+<body>
+    <p>Date and time</p>
+    <!-- Creation -->
+    <script>
+         let now = new Date();
+         document.write( now +"<br>"  ); // shows current date/time
+         document.write(now.getHours());
+    </script><br>
+
+    <script>
+        // 0 means 01.01.1970 UTC+0
+let Jan01_1970 = new Date(0);
+document.write( Jan01_1970 +"<br>" );
+let J = new Date(0);
+document.write( J +"<br>" );
+// now add 24 hours, get 02.01.1970 UTC+0
+let Jan02_1970 = new Date(24 * 3600 * 1000);
+document.write( Jan02_1970 );
+    </script><br>
+
+    <script>
+        // 31 Dec 1969
+let Dec31_1969 = new Date(-24 * 3600 * 1000);
+document.write( Dec31_1969 +"<br>");
+    </script>
+    <script>
+        var date = new Date("2017-01-26");
+        document.write(date+"<br>");
+        var date = new Date("2017-08-26");
+        document.write(date+"<br>");
+        var date = new Date("2017-04-26");
+        document.write(date +"<br>");
+    </script>
+    <script>
+        let dates = new Date(2011, 0, 1, 2, 3, 4, 567);
+        document.write( dates  +"<br>"); // 1.01.2011, 02:03:04.567
+    </script>
+    <script>
+        let a = new Date(2011, 0, 1, 0, 0, 0, 0);
+        document.write(a +"<br>");
+    </script>
+    <script>
+      let b = new Date(2011, 0, 1);
+      document.write(b +"<br>");
+    </script>
+    <script>
+        // current date
+let datee = new Date();
+
+// the hour in your current time zone
+document.write( datee.getHours() +"<br>");
+
+// the hour in UTC+0 time zone (London time without daylight savings)
+document.write( datee.getUTCHours()+"<br>" );
+    </script>
+    <script>
+        document.write( new Date().getTimezoneOffset() +"<br>"  );
+    </script>
+    <script>
+    let today = new Date();
+
+today.setHours(0);
+document.write(today+"<br>" ); // still today, but the hour is changed to 0
+
+today.setHours(0, 0, 0, 0);
+document.write(today+"<br>" ); // still today, now 00:00:00 sharp.
+    </script>
+    <script>
+        let datess = new Date(2013, 0, 60); // 32 Jan 2013 ?!?
+        document.write(datess); // ...is 1st Feb 2013!
+    </script><br>
+    <script>
+        var date = new Date();
+        document.write(+date +"<br>"); // the number of milliseconds, same as date.getTime()
+    </script>
+
+    <script>
+        function pow(x, n) {
+  let result = 1;
+
+  // multiply result by x n times in the loop
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+
+document.write( pow(2,3) +"<br>"); // 8
+    </script>
+</body>
+</html>

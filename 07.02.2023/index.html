@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p>Declaring Strict Mode</p>
+<!-- <script>
+"use strict";
+x = 3.14;  // This will cause an error (x is not defined).
+document.write(x);
+</script>
+
+<script>
+    //  without "use strict"
+    x = 3.14; 
+    document.write(x);
+    </script>
+
+
+<script>
+    "use strict";
+    function myFunction() {
+      y = 3.14;   // This will cause an error (y is not defined)
+      document.write(y);
+    }
+    myFunction();
+    </script> -->
+
+<script>
+   //  without "use strict"
+    function myFunction() {
+      y = 3.14;   
+      document.write(y);
+    }
+    myFunction();
+    </script><br>
+
+<!-- <script>
+    var x = 3.14;    // This will not cause an error.
+    function myFunction() {
+      "use strict";
+     var y = 3.14;  // This will cause an error (y is not defined).
+     document.write((x+y));
+    }
+    // document.write(myFunction());
+    myFunction();
+    </script><br> -->
+
+    <script>
+         x = 3.14;    // This will not cause an error.
+        myFunction();
+        function myFunction() {
+          "use strict";
+           y = 3.14;     // This will cause an error (y is not defined).
+         return (x+y);
+        }
+        document.write(myFunction());
+        </script>
+
+        <p>Not Allowed in Strict Mode</p>
+        <script>
+            "use strict";
+            x = {p1:10, p2:20};   // This will cause an error (x is not defined).
+            </script><br>
+
+<script>
+    "use strict";
+   var x = {p1:10, p2:20};   // This willnot cause an error (x is not defined).
+   document.write(x.p1);
+    </script>
+
+<script>
+    "use strict";
+    function x(p1, p2) {
+        delete x;       // This willnot cause an error
+    }; 
+    document.write(x.p1)
+    </script>
+    
+    <p>String Conversion</p>
+    <script>
+        let y = "John";        // string
+        let x = + y;              //number
+        document.write(y + "<br>" + typeof x);
+        </script>
+
+     <p>Numeric Conversion</p>
+        <script>
+            alert( "6" / "2" ); // 3, strings are converted to numbers
+        </script>
+        <script>
+            let x = 123;
+            String(x)+ "<br>" +         // returns a string from a number variable x
+            String(123)+ "<br>" +       // returns a string from a number literal 123
+            String(100 + 23)+ "<br>" +  // returns a string from a number from an expression
+            document.write(x)
+        </script>
+</body>
+</html>

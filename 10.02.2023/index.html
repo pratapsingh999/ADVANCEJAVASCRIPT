@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let user = {
+         name: "John",
+         age: 30
+       };
+
+let key = prompt("What do you want to know about the user?", "name");
+
+// access by variable
+alert( user[key] ); // John (if enter "name")
+    </script> -->
+
+    <!-- <script>
+        function makeUser(name, age) {
+  return {
+    name: name,
+    age: age,
+    // ...other properties
+  };
+}
+
+let user = makeUser("John", 30);
+alert(user.name); // John
+    </script> -->
+
+<!-- <script>
+        let user = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+
+for (let key in user) {
+  // keys
+  alert( key );  // name, age, isAdmin
+  // values for the keys
+  alert( user[key] ); // John, 30, true
+}
+    </script> -->
+
+    <!-- <script>
+        let user = { name: "John" };
+
+let admin = user; // copy the reference
+document.write(admin.name);
+    </script>
+    <script>
+        let message = "Hello!";
+let phrase = message;
+document.write(phrase);
+    </script> -->
+
+    <!-- <script>
+        let user = { name: 'John' };
+
+let admin = user;
+
+admin.name = 'Pete'; // changed by the "admin" reference
+
+document.write(user.name); // 'Pete', changes are seen from the "user" reference
+document.write(admin.name); 
+    </script> -->
+
+    <!-- <script>
+        const user = {
+  name: "John"
+};
+
+user.name = "Pete"; // (*)
+
+alert(user.name); // Pete
+    </script> -->
+
+    <!-- <script>
+        let user = { name: "John" };
+
+Object.assign(user, { name: "Pete" });
+
+document.write(user.name); // now user = { name: "Pete" }
+    </script> -->
+
+    <script>
+        let user = {
+  name: "John",
+  sizes: {
+    height: 182,
+    width: 50
+  }
+};
+
+document.write( user.sizes.width+"<br>" );
+document.write( user.name );
+    </script>
+</body>
+</html>

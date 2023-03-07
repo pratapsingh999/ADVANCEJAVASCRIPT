@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var number = [1120,999,8,1500,280,2590];      
+        // var a = number.sort(function(a, b){return a - b}); 
+        // document.write(a+"<br>")  
+        let first = -1, second = -1;
+
+        // document.write(number.sort()[1]);
+        // console.log(number.sort()[1]);
+        // document.write(a)
+        for(let i=0; i<number.length-1; i++){
+           if(number[i] > first){
+               second = first
+               first = number[i];
+           }else if(number[i] > second && number[i] != first){
+               second = number[i]
+           }
+        }
+        document.write(second)
+    </script>
+
+    <!-- <script>
+        var number = [1120,999,8,1500,280,2590]; 
+        
+        // var secondlargenumber = number.sort((a,b)=>b-a)[number.length-2];
+        var largenumber = number.sort((a,b)=>{ console.log(a-b)})[number.length-2];
+        console.log(largenumber);
+        document.write(largenumber);
+        // document.write(secondlargenumber);
+        ll
+    </script> -->
+</body>
+</html>

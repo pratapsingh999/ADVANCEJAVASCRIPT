@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrymethods</title>
+</head>
+<body>
+    <script>
+    //1.push
+var number = [1,2,3,4,5,6,7,8];
+var add = number.push(7,8,9,0,3,4,5);
+console.log(number);
+
+//2.pop
+var remove = number.pop()
+console.log(number);
+
+//3.unshift
+var added = number.unshift(9,97,36,38,93);
+console.log(number);
+
+//4.shift
+var removed = number.shift();
+console.log(number);
+
+//5.sort
+var sort = number.sort();
+console.log(number);
+
+var ascending = number.sort(function(a, b){return a-b});
+console.log(number);
+
+var decending = number.sort(function(a, b){return b-a});
+console.log(number);
+
+var lowestvalue = number.sort(function(a, b){return a-b});
+console.log(number[0]);
+
+var higestvalue = number.sort(function(a, b){return b-a});
+console.log(number[0]);
+
+//6.revers
+var numbers = [6,38,90,3,4,5,7,]
+var reversing = numbers.reverse();
+console.log(numbers);
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+var revers = fruits.reverse();
+console.log(fruits);
+
+//7.concat
+var concating = numbers.concat("hi","pratap","singh");
+console.log(concating);
+var concating = numbers.concat("hi","pratap","singh","birthaday",12,2,1999);
+console.log(concating);
+
+//8.splice 
+var a = [7,48,69,49,85,484,4049]
+var b = a.splice(2,1,"pratap","baba");
+console.log(a);
+
+var a = [7,48,69,49,85,484,4049]
+var b = a.splice(2,4,"pratap","baba");
+console.log(a);
+
+var a = [7,48,69,49,85,484,4049]
+var b = a.splice(2,5);
+console.log(a);
+
+
+var a = ["apple", "mango", "banana", "grapes"];
+var b = a.splice(2,1,"pratap","baba");
+console.log(a);
+
+var a = ["apple", "mango", "banana", "grapes"];
+var b = a.splice(2,0,"pratap","baba");
+console.log(a);
+
+var a = ["apple", "mango", "banana", "grapes"];
+var b = a.splice(2,1);
+console.log(a);
+
+var a = ["apple", "mango", "banana", "grapes"];
+var b = a.splice(2,2);
+console.log(a);
+
+
+//9.slice
+
+var at = ["apple", "mango", "banana", "grapes"];
+var by = at.slice(2,3);
+console.log(by);
+
+var at = ["apple", "mango", "banana", "grapes"];
+var by = at.slice(2,4);
+console.log(by);
+
+var aq = [7,48,69,49,85,484,4049]
+var bh = aq.slice(2,4);
+console.log(bh);
+
+//10.joint
+  
+const fruit = ["Banana", "Orange", "Apple", "Mango"];
+let text = fruit.join("  and  ");
+console.log(text);
+
+const fruit_s = ["Banana", "Orange", "Apple", "Mango","grapes", "Apple"];
+let text_s = fruit_s.join(" ");
+console.log(text_s);
+
+//11.is array
+
+//var p = ["Banana", "Orange", "Apple", "Mango"];
+//var p = 19;
+var p = [{}];
+var jj  = Array.isArray(p);
+console.log(jj)
+
+//12.indexOf 
+var indexposition = fruit_s.indexOf("Apple");
+console.log( indexposition)
+
+var indexposition = fruit_s.indexOf("apple");
+console.log( indexposition)
+
+
+var indexposition = fruit_s.indexOf("Apple",3);
+console.log( indexposition)
+
+//13.lastindexOf
+
+var fruit_ss = ["Banana", "Orange", "Apple", "Mango","grapes", "Apple"];
+var lastindexOf = fruit_ss.lastIndexOf("Apple");
+console.log(lastindexOf);
+
+var fruit_ss = ["Banana", "Orange", "Apple", "Mango","grapes", "Apple"];
+var lastindexOf = fruit_ss.lastIndexOf("apple");
+console.log(lastindexOf);
+
+
+var fruit_ss = ["Banana", "Orange", "Apple", "Mango","grapes", "Apple"];
+var lastindexOf = fruit_ss.lastIndexOf("Apple", 2);   //Start the search at position 2
+console.log(lastindexOf);
+
+var fruit_ss = ["Banana", "Orange", "Apple", "Mango","grapes", "Apple"];
+var lastindexOf = fruit_ss.lastIndexOf("Apple", -4);
+console.log(lastindexOf);
+
+//14.includes()
+
+var people = ["pratap","singh","thakur","where","are","you","from"];
+var check = people.includes("singh");
+console.log(check);
+
+var people = ["pratap","singh","thakur","where","are","you","from"];
+var check = people.includes("akash");
+console.log(check);
+
+var people = ["pratap","singh","thakur","where","are","you","from"];
+var check = people.includes("aditya");
+console.log(check);
+
+var people = ["pratap","singh","thakur","where","are","you","from"];
+var check = people.includes("are",3);   //1,2,3,4
+console.log(check);
+
+var people = ["pratap","singh","thakur","where","are","you","from"];
+var check = people.includes("are",5);    // check "are" is there or not
+console.log(check);                      //  starting the search from position 5 
+
+// 15.some()
+
+var ages = [3, 10, 18, 20];
+var some = ages.some(checkAdult);
+console.log(some);
+
+function checkAdult(age) {
+  return age > 18;
+}
+
+//16.every()
+
+var ages = [30, 10, 18, 20];
+var every = ages.every(checkAdult);
+console.log(every);
+
+function checkAdult(age) {
+  return age > 18;
+}
+
+//17.find()
+
+var ages = [3, 10, 18, 20];
+var every = ages.find(checkAdult);
+console.log(every);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+//18.findIndex()
+var ages = [3, 10, 18, 20];
+var every = ages.findIndex(checkAdult);
+console.log(every);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+//19.tostring()
+
+var men = ["black men","whiten men","broun men"];
+var convertstring = men.toString();  
+console.log(convertstring);
+
+//20.fill
+
+var men = ["black men","whiten men","broun men"];
+var fillmethod = men.fill("indian");  
+console.log(fillmethod);
+
+var men = ["black men","whiten men","broun men"];
+var fillmethod = men.fill("indian", 1,2);  // (1st perameter indicte position , 2nd one number)
+console.log(fillmethod);
+</script>
+
+</body>
+</html>
